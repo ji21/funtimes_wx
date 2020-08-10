@@ -16,6 +16,7 @@
     "color": "#000000",
     "selectedColor": "#1EDD88",
     "backgroundColor": "#BFE8FF",
+    "borderStyle": "white",
     "list": [{
       "selectedIconPath": "images/tabbar/home_select.png",
       "iconPath": "images/tabbar/home.png",
