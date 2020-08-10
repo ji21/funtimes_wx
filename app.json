@@ -4,6 +4,7 @@
     "pages/profile/profile",
     "pages/search/search",
     "pages/itinerary/itinerary",
+    "pages/create/create",
     "pages/logs/logs"
   ],
   "window":{
@@ -30,7 +31,7 @@
     }, {
       "selectedIconPath": "images/tabbar/confetti.png",
       "iconPath": "images/tabbar/confetti_select.png",
-      "pagePath": "pages/search/search",
+      "pagePath": "pages/create/create",
       "text": "Add new"
     }, 
     {
