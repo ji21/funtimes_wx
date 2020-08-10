@@ -1,2 +1,9 @@
-<!--pages/landing/landing.wxml-->
-<text>pages/landing/landing.wxml</text>
+<view class="container">
+   <view class="banner">
+   </view>
+</view>
+
+
+
+
+
