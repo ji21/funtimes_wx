@@ -5,8 +5,7 @@
    border-radius: 15rpx;
    display: cover;
    background-size: 100%;
-   border: 2px solid lightgray;
-   box-shadow: lightgrey;
+   box-shadow: 2rpx 2rpx 4rpx lightgrey;
 }
 
 .cards{
