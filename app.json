@@ -10,7 +10,7 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Funtimes",
+    "navigationBarTitleText": "funtimes",
     "navigationBarTextStyle":"black"
   },
   "tabBar": {

@@ -1,3 +1,4 @@
+@import '/stylesheets/index.wxss';
 /**app.wxss**/
 page {
   background: #F7F7F7;
@@ -7,4 +8,11 @@ page {
   background: #F7F7F7;
   padding: 0;
   z-index: 1;
+}
+
+#line {
+  position: fixed;
+  bottom: 0;
+  border: 5rpx solid #F7F7F7;
+  width: 100%;
 }

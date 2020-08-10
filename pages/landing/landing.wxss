@@ -9,8 +9,36 @@
    box-shadow: lightgrey;
 }
 
+.cards{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   margin-left: 20rpx;
+   height: 40%;
+}
+.row1 {
+background-color: blue;
+height: 240rpx;
+margin-top: 5px;
+margin-bottom: 5px;
+width: 96%;
+justify-self: center;
+display: flex;
+flex-direction: row;
+}
 
 
+.eventcard {
+   background-color: lightgray;
+   height: 200rpx;
+   margin: 10rpx 10rpx 10rpx;
+   width: 370rpx;
+}
+
+.cards .row1 .image {
+   height: 80rpx;
+   width: 200rpx;
+}
 
 
 

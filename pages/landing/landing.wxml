@@ -3,7 +3,11 @@
    </view>
 </view>
 
-
-
-
-
+<view class="row-between w100 wrap px box-b">
+      <view class="w50 noshrink pa box-b" wx:for="{{images}}">
+         <!-- <view class=""> -->
+            <image mode="aspectFill" class="w100" src="{{item}}"/>
+         <!-- </view> -->
+      </view>
+      <view id="line"></view>
+</view>
