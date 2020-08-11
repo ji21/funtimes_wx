@@ -1,6 +1,6 @@
 <!--pages/create/create.wxml-->
 <view class="container">
-  <button bindtap="goToCreatenew"> 
+  <button bindtap="goToCreateNew"> 
     <image src="../../images/create/strategic-plan.png" />
     <view class="text">Plan and Share an Itinerary</view>
   </button>

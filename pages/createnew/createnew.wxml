@@ -1,42 +1,24 @@
 <view class="container">
-      <view class="searchBar text-center flex row justify-around radius20 shadow bold f36">
-        <text>Create New Itinerary</text>
-      </view>
-
-    <form bindsubmit="goToMappage">
-      <view class="searchbox radius20 ">
-        <view class="title flex ">
-        <label>***Itinerary Name</label>
-        <input type="text" name="itineraryname" class="bg-white radius10"></input>
-        </view>
-
-       <view class="title flex ">
-        <label>Date</label>
-        <input type="text" name="date" class="bg-white radius10"></input>
-        </view>
-  <view class="flex row">
-        <view class="title flex ">
-        <label>**Start time</label>
-        <input type="text" name="start_time" class="bg-white radius10"></input>
-        </view>
-
-        <view class="title flex ">
-        <label>**End time</label>
-        <input type="text" name="end_time" class="bg-white radius10"></input>
-        </view>
-
+  <view class="top {{hide? 'hide': ''}}">
+    <view class="header">Create New Itinerary</view>
   </view>
-         <view class="title flex ">
-        <label>Keyword</label>
-        <input type="text" name="date" class="bg-white radius10"></input>
+  <view class="search-bar">
+    <image src="../../images/education.png" />
+    <view id="space"></view>
+    <input type="text" name="search" placeholder="Search" class="search-text" bindinput="hideForm"></input>
+  </view>
+
+    <form bindsubmit="goToMappage" class="{{hide? 'hide':''}}">
+        <view class="title flex">
+          <view id="white-space"></view>
+          <input type="text" name="itineraryname" class="bg-white" placeholder="Itinerary Name"></input>
         </view>
 
-      <view><text>Checkbox Preferences</text></view> 
-
-      <button form-type="submit" class="navy">Create</button>
-
-      </view>
-</form>
-
-
+        <view id="white-space"></view>
+        <view class="picker-div">
+          <view>Create Itinerary for:</view>
+          <picker mode="date" value="{{todayDate}}" start="{{todayDate}}" end="3000-01-01" bindchange="bindDateChange">{{todayDate}}</picker>
+        </view>
+        <button form-type="submit" class="create">Create</button>
+    </form>
 </view>

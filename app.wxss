@@ -16,3 +16,23 @@ page {
   border: 5rpx solid #F7F7F7;
   width: 100%;
 }
+
+.top {
+  background-image: url(http://lc-z1O50gmk.cn-n1.lcfile.com/e714b736334b7aea9566/wallbanner.jpg);
+  background-size: 100%;
+  width: 100%;
+  padding: 40rpx 10rpx;
+  height: 24rpx;
+}
+
+.header {
+  text-align: center;
+  position: fixed;
+  top: 33rpx;
+  color: white;
+  left: 204rpx;
+  font-weight: bold;
+  background-color:#BFE8FF;
+  padding: 12rpx 18rpx;
+  border-radius: 20rpx;
+}
