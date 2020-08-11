@@ -5,6 +5,9 @@
     "pages/search/search",
     "pages/itinerary/itinerary",
     "pages/create/create",
+    "pages/mappage/mappage",
+    "pages/createnew/createnew",
+    "pages/show/show",
     "pages/logs/logs"
   ],
   "window":{

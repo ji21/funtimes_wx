@@ -1,5 +1,6 @@
 <view class="container">
-   <view class="banner">
+   <view class="banner ">
+       <view class="weatherbox"> W</view>
    </view>
 </view>
 

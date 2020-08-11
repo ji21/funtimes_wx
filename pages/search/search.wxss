@@ -1,1 +1,12 @@
 /* pages/search/search.wxss */
+
+.banner{
+padding: 30rpx 10rpx;
+background-color: #C0E8FF;
+box-shadow: 0px 10px 45px -15px grey;
+background-image: url(http://lc-z1O50gmk.cn-n1.lcfile.com/e714b736334b7aea9566/wallbanner.jpg);
+background-size: 100%;
+}
+.searchbox{ 
+   background-color: #E6F8FF;
+}

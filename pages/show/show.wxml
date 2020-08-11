@@ -1,22 +1,20 @@
-<!--pages/profile/profile.wxml-->
+<!--pages/show/show.wxml-->
 <view class="container">
       <view class="banner text-center flex row justify-around radius20 shadow bold f36">
-        <text>My Profile</text>
+        <text> Showing One Event {title}</text>
       </view>
 
-
-
 <view class="details radius40 flex column">
-   <view class="profilefoto radius40">
-      <text>Profile photo</text>
+   <view class="eventfoto radius40">
+      <text>Event photo</text>
    </view>
 
       <view class="mt40">
-        <label class="mt100 ml50">Name</label>
+        <label class="mt100 ml50">Title</label>
       </view>
 
       <view class="mt40">
-      <label class="mt100 ml50">Preferences</label>
+      <label class="mt100 ml50">Details</label>
       </view>
 
 

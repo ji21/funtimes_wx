@@ -1,0 +1,15 @@
+<!--pages/mappage/mappage.wxml-->
+<view class="container">
+      <view class="banner text-center flex row justify-around radius20 shadow bold f36">
+        <text>Funday {+Itinerary + title Date}</text>
+      </view>
+
+      <view class="mapbox mt20 mr20 ml20 radius30">
+      <text>Insert map here</text>
+      </view>
+
+
+
+
+
+</view>

@@ -62,5 +62,11 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  goToCreatenew: function() {
+    wx.redirectTo({
+      url: '/pages/createnew/createnew',
+    })
   }
+
 })
