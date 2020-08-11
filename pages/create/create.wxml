@@ -1,11 +1,11 @@
 <!--pages/create/create.wxml-->
 <view class="container">
-  <button> 
+  <button bindtap="goToCreatenew"> 
     <image src="../../images/create/strategic-plan.png" />
     <view class="text">Plan and Share an Itinerary</view>
   </button>
 
-  <button> 
+  <button > 
     <image src="../../images/create/wheel.png" />
     <view class="text">Generate a randomised itinerary</view>
   </button>

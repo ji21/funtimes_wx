@@ -1,0 +1,42 @@
+<view class="container">
+      <view class="searchBar text-center flex row justify-around radius20 shadow bold f36">
+        <text>Create New Itinerary</text>
+      </view>
+
+    <form bindsubmit="goToMappage">
+      <view class="searchbox radius20 ">
+        <view class="title flex ">
+        <label>***Itinerary Name</label>
+        <input type="text" name="itineraryname" class="bg-white radius10"></input>
+        </view>
+
+       <view class="title flex ">
+        <label>Date</label>
+        <input type="text" name="date" class="bg-white radius10"></input>
+        </view>
+  <view class="flex row">
+        <view class="title flex ">
+        <label>**Start time</label>
+        <input type="text" name="start_time" class="bg-white radius10"></input>
+        </view>
+
+        <view class="title flex ">
+        <label>**End time</label>
+        <input type="text" name="end_time" class="bg-white radius10"></input>
+        </view>
+
+  </view>
+         <view class="title flex ">
+        <label>Keyword</label>
+        <input type="text" name="date" class="bg-white radius10"></input>
+        </view>
+
+      <view><text>Checkbox Preferences</text></view> 
+
+      <button form-type="submit" class="navy">Create</button>
+
+      </view>
+</form>
+
+
+</view>

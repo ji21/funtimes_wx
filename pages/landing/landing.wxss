@@ -8,16 +8,24 @@
    box-shadow: 2rpx 2rpx 4rpx lightgrey;
 }
 
+.container .banner .weatherbox {
+   background-color: lightpink;
+   height:100rpx;
+   width:100rpx;
+   border-radius: 40%;
+   margin: 40rpx 50rpx 0rpx 600rpx;
+}
+
 .cards{
    display: flex;
    flex-direction: column;
    justify-content: space-evenly;
    margin-left: 20rpx;
-   height: 40%;
+   height: 32%;
 }
 .row1 {
 background-color: blue;
-height: 240rpx;
+height: 200rpx;
 margin-top: 5px;
 margin-bottom: 5px;
 width: 96%;
@@ -25,7 +33,6 @@ justify-self: center;
 display: flex;
 flex-direction: row;
 }
-
 
 .eventcard {
    background-color: lightgray;
