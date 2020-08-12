@@ -16,21 +16,27 @@
   }
 
 form {
-  margin: 10rpx 0rpx;
+  margin: 0rpx 0rpx 10rpx 0rpx;
   width: 100%;
-  background-color: #BFE8FF;
   box-shadow: 10rpx 10rpx 10rpx white;
   padding-bottom: 25rpx;
 }
 
 .create {
-  margin-top: 24rpx;
+  margin-top: 10rpx;
+  background-color: #3BE2AB;
+  color: white;
+  width: 100%!important;
+  margin-left: 0rpx;
+  margin-right: 0rpx;
+  height:100rpx;
+  padding-top:26rpx;
 }
 
 .title {
-  margin: 15rpx 40rpx 15rpx 5rpx;
+  margin: 0rpx 40rpx 15rpx 0rpx;
   padding-top: 20rpx;
-  height: 84rpx;
+  height: 100rpx;
   width: 99%;
 }
 
@@ -50,12 +56,12 @@ form {
 
 .search-bar {
   width: 100%;
-  height: 120rpx;
+  height: 84rpx;
   display: flex;
   background-color: white;
   align-items: center;
   margin-top: 10rpx;
-  box-shadow: 2rpx 0rpx 30rpx rgb(148, 145, 145);
+  box-shadow: 2rpx 3rpx 7rpx rgb(212, 211, 211);
 }
 
 .search-text {
@@ -65,7 +71,7 @@ form {
 
 .search-bar > image {
   height: 75%;
-  width: 13%;
+  width: 10%;
   padding-left: 24rpx;
 }
 
@@ -87,7 +93,7 @@ picker {
 }
 
 .picker-div {
-  height: 91rpx;
+  height: 100rpx;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -104,3 +110,4 @@ picker {
   padding-left: 38rpx;
   color: rgb(138, 136, 136);
 }
+

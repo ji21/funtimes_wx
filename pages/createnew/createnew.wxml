@@ -21,4 +21,20 @@
         </view>
         <button form-type="submit" class="create">Create</button>
     </form>
+     <!-- {{events[index]}} -->
+    <view class="a-event-card" wx:for="{{events}}" wx:for-item="event" data-id="{{event.id}}">
+      <image src="{{event.image_link}}"/>
+      <view class="info">
+        <view id="event-name">{{event.title}}</view>
+        <view class="first-div">
+          <view class="category">{{event.category}}</view>
+          <view class="time">{{event.time}}, {{event.date}}</view>
+        </view>
+        <view class="second-div">
+          <view id="address">{{event.venue}}</view>
+          <image src="{{wishlist[event.id]?'../../images/heart (1).png':'../../images/heart.png'}}" id="heart" data-id="{{event.id}}" bindtap="save"/>
+        </view>
+        <view id="description">{{event.description}}</view>
+      </view>
+    </view>
 </view>

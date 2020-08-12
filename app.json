@@ -13,13 +13,13 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "funtimes",
+    "navigationBarTitleText": "jeff times",
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
     "color": "#000000",
     "selectedColor": "#1EDD88",
-    "backgroundColor": "#BFE8FF",
+    "backgroundColor": "#FFFFFF",
     "borderStyle": "white",
     "list": [{
       "selectedIconPath": "images/tabbar/home_select.png",

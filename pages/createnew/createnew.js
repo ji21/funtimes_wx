@@ -1,4 +1,6 @@
 // pages/createnew/createnew.js
+const app = getApp();
+const globalWishlist = app.globalData.wishlist
 var today = new Date();
 
 let tomorrow = new Date(today)
@@ -41,14 +43,25 @@ Page({
     */
    data: {
       hide: false,
-      todayDate: today
+      todayDate: today,
+      saved: false,
+      wishlist: globalWishlist
    },
 
    /**
     * Lifecycle function--Called when page load
     */
    onLoad: function (options) {
-
+      wx.request({
+        url: 'https://funtimes.wogengapp.cn/api/v1/evints',
+        success: async (res) => {
+          console.log(res.data);
+          this.setData({events: res.data})
+          // for (x of this.events) {
+          //   globalWishlist[x.id] = false;
+          // }
+        }
+      })
    },
 
    /**
@@ -117,5 +130,12 @@ Page({
         todayDate: e.detail.value
       })
       console.log(this.data.todayDate)
+    },
+    save: function(e) {
+      const id = e.currentTarget.dataset.id
+      console.log(id)
+      globalWishlist[id] ? globalWishlist[id] = false : globalWishlist[id] = true
+      this.setData({wishlist: globalWishlist})
+      console.log(this.data.wishlist)
     }
 })
