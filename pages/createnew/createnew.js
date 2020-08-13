@@ -1,14 +1,8 @@
 // pages/createnew/createnew.js
 const app = getApp();
+const host = app.globalData.host
 const globalWishlist = app.globalData.wishlist
 var today = new Date();
-
-let tomorrow = new Date(today)
-tomorrow.setDate(today.getDate() + 1)
-
-var dd1 = tomorrow.getDate();
-var mm1 = tomorrow.getMonth() + 1;
-var yyyy1 = tomorrow.getFullYear();
 
 var dd = today.getDate();
 var mm = today.getMonth()+1; 
@@ -24,18 +18,6 @@ if(mm<10)
 } 
 today = yyyy+'-'+mm+'-'+dd;
 
-if(dd1<10) 
-{
-    dd1='0'+dd1;
-} 
-
-if(mm1<10) 
-{
-    mm1='0'+mm1;
-} 
-
-tomorrow = yyyy1+'-'+mm1+'-'+dd1;
-
 Page({
 
    /**
@@ -45,7 +27,7 @@ Page({
       hide: false,
       todayDate: today,
       wishlist: globalWishlist,
-      error: "Error 404"
+      selectList: {}
    },
 
    /**
@@ -113,9 +95,39 @@ Page({
 
    },
 
-   goToMappage: function() {
-      wx.redirectTo({
-        url: '/pages/mappage/mappage',
+   goToMappage: function(e) {
+      const name = e.detail.value.title
+      const date = e.detail.value.date
+      let list = []
+      const selected = this.data.selectList
+      for (let prop in selected) {
+        if (selected[prop] === true) {
+          list+=prop
+          console.log(prop)
+        }
+      }
+      const id = app.globalData.userId
+      const itinerary = {
+        date: date,
+        name: name,
+        user_id: id
+      }
+      const a = {
+        itinerary,
+        evint_array: list
+      }
+      // console.log(id)
+      // console.log(e.detail.value)
+      // console.log(list[1])
+      wx.request({
+        url: host + 'itineraries',
+        method: "POST",
+        data: a,
+        success: () => {
+          wx.redirectTo({
+            url: '/pages/mappage/mappage',
+          })
+        }
       })
     },
     hideForm: function(e) {
@@ -137,5 +149,14 @@ Page({
       globalWishlist[id] ? globalWishlist[id] = false : globalWishlist[id] = true
       this.setData({wishlist: globalWishlist})
       console.log(this.data.wishlist)
+    },
+    select: function(e) {
+      const id = e.currentTarget.dataset.id
+      const select = this.data.selectList
+      select[id] ? select[id] = false : select[id] = true
+      this.setData({selectList: select })
+      console.log(this.data.selectList)
+      console.log(id)
+      console.log(this.data.selectList[id])
     }
 })
