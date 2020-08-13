@@ -7,7 +7,7 @@ Page({
    * Page initial data
    */
   data: {
-    logIn: app.globalData.userLoggedIn
+    logIn: app.globalData.userInfo
   },
 
   /**
@@ -74,5 +74,8 @@ Page({
     wx.navigateTo({
       url: '/pages/wishlist/wishlist',
     })
+  },
+  getUserInfo: function(e) {
+    console.log(e.detail.rawData)
   }
 })

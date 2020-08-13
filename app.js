@@ -47,8 +47,7 @@ App({
   },
   globalData: {
     userInfo: null,
-    // host: "host url",
+    host: "https://funtimes.wogengapp.cn/api/v1/",
     wishlist: {},
-    userLoggedIn: false
   }
 })

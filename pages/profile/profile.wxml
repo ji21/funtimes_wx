@@ -1,6 +1,17 @@
 <view class="profile-top"> 
-  <view class="log-in {{logIn? 'hide': ''}}">Log in/登入</view>
-
+  <button class="log-in {{logIn? 'hide': ''}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Log in/登入</button>
+  <view class="hider {{logIn? '':'hide'}}">
+    <view class="user-info">
+      <image src=""/>
+      <view class="user-info-text">
+        <view class="nick-name">Jeffrey</view>
+        <view class="gender-country">
+          <view class="gender">🙎🏻‍♂️</view>
+          <view class="country">United Kingdom</view>
+        </view>
+      </view>
+    </view>
+  </view>
 </view>
 
 <view class="container">

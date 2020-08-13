@@ -16,7 +16,10 @@
    height: 61rpx;
    width: 252rpx;
    left: 60rpx;
-   font-size: 38rpx;     
+   font-size: 38rpx;  
+   background-color: #3BE2AB!important;
+   margin: 0rpx!important;
+   font-weight: 300!important;   
 }
 
 .container {
@@ -93,9 +96,58 @@
    width: 90%!important;
    height: 100rpx;
    color: white;
-   background-color: #FF695D;
+   background-color: #f14a3f;
    margin-top: 30rpx;
    padding-top: 27rpx;
    margin-left: 0rpx;
    margin-right: 0rpx;
+}
+
+.hider {
+   position: fixed;
+   top: 43rpx;
+   height: 97rpx;
+   width: 561rpx;
+   left: 60rpx; 
+}
+
+.user-info {
+   width: 100%;
+   height: 100%; 
+   display: flex;
+   justify-content: flex-start;
+}
+
+.user-info > image {
+   height: 100%;
+   width: 100rpx;
+   border-radius: 50%;
+}
+
+.user-info > .user-info-text {
+   margin-left: 20rpx;
+   height: 100%;
+   width: 371rpx!important;
+   display: flex;
+   flex-direction: column;
+}
+
+.nick-name {
+   font-size: 32rpx;
+   height: 50%;
+}
+
+.gender-country {
+   height: 50%;
+   display: flex;
+}
+
+.gender {
+   height: 100%;
+}
+
+.country {
+   height: 100%;
+   font-size: 27rpx;
+   padding-top: 10rpx
 }

@@ -1,40 +1,43 @@
 <view class="container">
-  <view class="top {{hide? 'hide': ''}}">
-    <view class="header">Create New Itinerary</view>
-  </view>
   <view class="search-bar">
     <image src="../../images/tabbar/search.png" />
     <view id="space"></view>
     <input type="text" name="search" placeholder="Search" class="search-text" bindinput="hideForm"></input>
   </view>
-
     <form bindsubmit="goToMappage" class="{{hide? 'hide':''}}">
+        <view id="title">Create New Itinerary</view>
         <view class="title flex">
           <view id="white-space"></view>
-          <input type="text" name="itineraryname" class="bg-white" placeholder="Itinerary Name"></input>
+          <input type="text" name="title" class="bg-white" placeholder="Itinerary Name"></input>
         </view>
 
         <view id="white-space"></view>
         <view class="picker-div">
           <view>Create Itinerary for:</view>
-          <picker mode="date" value="{{todayDate}}" start="{{todayDate}}" end="3000-01-01" bindchange="bindDateChange">{{todayDate}}</picker>
+          <picker mode="date" value="{{todayDate}}" name="date" start="{{todayDate}}" end="3000-01-01" bindchange="bindDateChange">{{todayDate}}</picker>
         </view>
         <button form-type="submit" class="create">Create</button>
     </form>
      <!-- {{events[index]}} -->
-    <view class="a-event-card" wx:for="{{events}}" wx:for-item="event" wx:if="{{!event.title.includes(error)}}" data-id="{{event.id}}">
-      <image src="{{event.image_link}}"/>
-      <view class="info">
-        <view id="event-name">{{event.title}}</view>
-        <view class="first-div">
-          <view class="category">{{event.category}}</view>
-          <view class="time">{{event.period}}, {{event.date}}</view>
+    <view class="wrapper {{selectList[event.id]? 'green-border':''}}" wx:for="{{events}}" wx:for-item="event">
+        <view class="a-event-card" data-id="{{event.id}}">
+          <image src="{{event.image_link}}"/>
+          <view class="info">
+            <view id="event-name">{{event.title}}</view>
+            <view class="first-div">
+              <view class="category">{{event.category}}</view>
+              <view class="time">{{event.period}}</view>
+            </view>
+            <view class="second-div">
+              <view id="address">{{event.venue}}</view>
+              <image src="{{wishlist[event.id]?'../../images/heart (1).png':'../../images/heart.png'}}" id="heart" data-id="{{event.id}}" bindtap="save"/>
+            </view>
+            <view id="description">{{event.description}}</view>
+          </view>
         </view>
-        <view class="second-div">
-          <view id="address">{{event.venue}}</view>
-          <image src="{{wishlist[event.id]?'../../images/heart (1).png':'../../images/heart.png'}}" id="heart" data-id="{{event.id}}" bindtap="save"/>
+        <view id="add-show"> 
+          <view class="details" bindtouchend="goToShow">Details</view>
+          <button class="{{selectList[event.id]? 'red':'green'}}" bindtap="select" data-id="{{event.id}}">{{selectList[event.id]? 'Remove' : 'Add'}}</button>
         </view>
-        <view id="description">{{event.description}}</view>
-      </view>
     </view>
 </view>

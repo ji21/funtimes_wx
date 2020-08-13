@@ -29,12 +29,18 @@ page {
   border-radius: 20rpx;
 }
 
-.a-event-card {
+.wrapper {
   width: 100%;
-  height: 284rpx;
   background-color: white;
   box-shadow: 2rpx 3rpx 7rpx rgb(212, 211, 211);
   margin-bottom: 15rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.a-event-card {
+  width: 100%;
+  height: 340rpx;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -70,28 +76,38 @@ page {
 #event-name {
   width: 100%;
   /* border: 1px solid black; */
+  font-size: 30rpx;
 }
 
 .first-div {
   /* border: 1px solid black; */
   width: 100%;
   display: flex;
-  font-size: 20rpx;
+  font-size: 22rpx;
   justify-content: flex-start;
   margin-top: 10rpx;
+  align-items: center;
 }
 
 .category {
   background-color: #3BE2AB;
-  padding: 5rpx 20rpx 2rpx 20rpx;
+  padding: 7rpx 20rpx 4rpx 20rpx;
   border-radius: 20rpx;
   margin-inline-end: 12rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .time {
   background-color: #3BE2AB;
-  padding: 5rpx 20rpx 2rpx 20rpx;
+  padding: 7rpx 20rpx 4rpx 20rpx;
   border-radius: 20rpx;
+  text-transform: capitalize;
+  text-overflow: ellipsis;
+  height: 28rpx;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .second-div {
@@ -102,16 +118,17 @@ page {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 16rpx;
+  margin-top: 20rpx;
 }
 
 #description {
   width: 100%;
   font-size: 24rpx;
   margin-top: 18rpx;
-  overflow: hidden;
+  overflow: auto;
   text-overflow:ellipsis;
-  height: 86rpx;  
+  height: 200rpx;  
+  white-space: normal;
 }
 
 
