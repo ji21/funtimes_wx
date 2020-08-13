@@ -1,9 +1,0 @@
-<!--pages/search/search.wxml-->
-
-<view class="container">
-      <view class="banner text-center flex row justify-around radius10">
-            <label class="f36 bold">Search Events</label>
-            <input type="text" class="searchbox radius20">Search for Events</input>
-      </view>
-
-</view>

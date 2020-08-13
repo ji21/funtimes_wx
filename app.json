@@ -2,17 +2,17 @@
   "pages":[
     "pages/landing/landing",
     "pages/profile/profile",
-    "pages/search/search",
     "pages/itinerary/itinerary",
     "pages/create/create",
     "pages/mappage/mappage",
     "pages/createnew/createnew",
     "pages/show/show",
+    "pages/wishlist/wishlist",
     "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#3BE2AB",
     "navigationBarTitleText": "jeff times",
     "navigationBarTextStyle":"black"
   },

@@ -1,4 +1,4 @@
-// pages/search/search.js
+// pages/wishlist/wishlist.js
 Page({
 
   /**
