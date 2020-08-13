@@ -1,11 +1,13 @@
 // pages/profile/profile.js
+const app = getApp()
+
 Page({
 
   /**
    * Page initial data
    */
   data: {
-
+    logIn: app.globalData.userLoggedIn
   },
 
   /**
@@ -62,5 +64,15 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  goToItinerary: function () {
+    wx.navigateTo({
+      url: '/pages/itinerary/itinerary',
+    })
+  },
+  goToWishlist: function () {
+    wx.navigateTo({
+      url: '/pages/wishlist/wishlist',
+    })
   }
 })

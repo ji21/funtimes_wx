@@ -1,27 +1,23 @@
-<!--pages/profile/profile.wxml-->
-<view class="container">
-      <view class="banner text-center flex row justify-around radius20 shadow bold f36">
-        <text>My Profile</text>
-      </view>
-
-
-
-<view class="details radius40 flex column">
-   <view class="profilefoto radius40">
-      <text>Profile photo</text>
-   </view>
-
-      <view class="mt40">
-        <label class="mt100 ml50">Name</label>
-      </view>
-
-      <view class="mt40">
-      <label class="mt100 ml50">Preferences</label>
-      </view>
-
-
-
-
+<view class="profile-top"> 
+  <view class="log-in {{logIn? 'hide': ''}}">Log in/登入</view>
 
 </view>
+
+<view class="container">
+  <view class="space"></view>
+  <view class="div1" bindtouchend="goToItinerary">
+    <view class="pair1">
+      <image class="list-img" src="../../images/tabbar/list.png"/>
+      <view class="list-text">My Itineraries</view>
+    </view>
+    <image class="next" src="../../images/next.png"/>
+  </view>
+  <view class="div2" bindtouchend="goToWishlist">
+    <view class="pair2">
+      <image class="list-img2" src="../../images/heart (2).png"/>
+      <view class="list-text2">My wishlist</view>
+    </view>
+    <image class="next" src="../../images/next.png"/>
+  </view>
+  <button class="log-out {{logIn?'':'hide'}}">Log out</button>
 </view>

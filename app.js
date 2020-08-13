@@ -48,6 +48,7 @@ App({
   globalData: {
     userInfo: null,
     // host: "host url",
-    wishlist: {}
+    wishlist: {},
+    userLoggedIn: false
   }
 })

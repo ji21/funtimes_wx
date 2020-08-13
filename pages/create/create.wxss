@@ -16,12 +16,13 @@ button {
   margin-left: 0rpx!important;
   margin-right: 0rpx!important;
   height: 38%;
-  margin-top: 77rpx;
+  margin-top: 100rpx;
   border-radius: 14rpx!important;
   background-color: #3BE2AB;
   display: flex;
   align-items: center;
   box-shadow: 10rpx 10rpx 10rpx white;
+  font-weight: 300!important;
 }
 
 image {
