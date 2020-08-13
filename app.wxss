@@ -30,7 +30,7 @@ page {
 }
 
 .wrapper {
-  width: 100%;
+  width: 95%;
   background-color: white;
   box-shadow: 2rpx 3rpx 7rpx rgb(212, 211, 211);
   margin-bottom: 15rpx;
@@ -61,6 +61,7 @@ page {
   width: 60%;
   position: relative;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 #heart {
@@ -85,29 +86,29 @@ page {
   display: flex;
   font-size: 22rpx;
   justify-content: flex-start;
-  margin-top: 10rpx;
+  margin-top: 28rpx;
   align-items: center;
 }
 
 .category {
   background-color: #3BE2AB;
-  padding: 7rpx 20rpx 4rpx 20rpx;
+  padding: 10rpx 20rpx 10rpx 16rpx;
   border-radius: 20rpx;
   margin-inline-end: 12rpx;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  color: white;
 }
 
 .time {
-  background-color: #3BE2AB;
-  padding: 7rpx 20rpx 4rpx 20rpx;
   border-radius: 20rpx;
   text-transform: capitalize;
   text-overflow: ellipsis;
   height: 28rpx;
   overflow: hidden;
   white-space: nowrap;
+  font-size: 22rpx;
 }
 
 .second-div {
@@ -118,7 +119,13 @@ page {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 20rpx;
+  margin-top: 19rpx;
+}
+
+.third-div {
+  /* border: 1px solid black; */
+  font-size: 22rpx;
+  width: 100%;
 }
 
 #description {

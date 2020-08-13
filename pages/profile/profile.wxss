@@ -96,7 +96,7 @@
    width: 90%!important;
    height: 100rpx;
    color: white;
-   background-color: #f14a3f;
+   background-color: #f5584d;
    margin-top: 30rpx;
    padding-top: 27rpx;
    margin-left: 0rpx;

@@ -19,25 +19,30 @@
         <button form-type="submit" class="create">Create</button>
     </form>
      <!-- {{events[index]}} -->
-    <view class="wrapper {{selectList[event.id]? 'green-border':''}}" wx:for="{{events}}" wx:for-item="event">
+    <view class="wrapper {{selectList[event.id]? 'green-border':''}}" wx:for="{{events}}" wx:for-item="event" data-id="{{event.id}}" bindtap="outOfIdeas">
         <view class="a-event-card" data-id="{{event.id}}">
           <image src="{{event.image_link}}"/>
           <view class="info">
-            <view id="event-name">{{event.title}}</view>
-            <view class="first-div">
-              <view class="category">{{event.category}}</view>
-              <view class="time">{{event.period}}</view>
+            <view id="card-container">
+              <view id="event-name">{{event.title}}</view>
+              <view class="first-div">
+                <view class="category">{{event.category}}</view>
+              </view>
+              <view class="second-div">
+                <view id="time">~ {{event.period}}</view>
+                <image src="{{wishlist[event.id]?'../../images/heart (1).png':'../../images/heart.png'}}" id="heart" data-id="{{event.id}}" bindtap="save"/>
+              </view>
             </view>
-            <view class="second-div">
-              <view id="address">{{event.venue}}</view>
-              <image src="{{wishlist[event.id]?'../../images/heart (1).png':'../../images/heart.png'}}" id="heart" data-id="{{event.id}}" bindtap="save"/>
+            <view class="third-div">
+              <view class="address">Venue:  {{event.venue}}</view>
             </view>
-            <view id="description">{{event.description}}</view>
           </view>
         </view>
-        <view id="add-show"> 
-          <view class="details" bindtouchend="goToShow">Details</view>
-          <button class="{{selectList[event.id]? 'red':'green'}}" bindtap="select" data-id="{{event.id}}">{{selectList[event.id]? 'Remove' : 'Add'}}</button>
+        <view id="add-wrapper" class="{{hideList[event.id]? '':'hide'}}">
+          <view id="add-show"> 
+            <view class="details" bindtouchend="goToShow">Details</view>
+            <button class="{{selectList[event.id]? 'red':'green'}}" bindtap="select" data-id="{{event.id}}">{{selectList[event.id]? 'Remove' : 'Add'}}</button>
+          </view>
         </view>
     </view>
 </view>
