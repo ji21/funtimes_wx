@@ -27,22 +27,11 @@
       "pagePath": "pages/landing/landing",
       "text": "Home"
     }, {
-      "selectedIconPath": "images/tabbar/search_select.png",
-      "iconPath": "images/tabbar/search.png",
-      "pagePath": "pages/search/search",
-      "text": "Discover"
-    }, {
       "selectedIconPath": "images/tabbar/confetti.png",
       "iconPath": "images/tabbar/confetti_select.png",
       "pagePath": "pages/create/create",
       "text": "Add new"
-    }, 
-    {
-      "selectedIconPath": "images/tabbar/list_select.png",
-      "iconPath": "images/tabbar/list.png",
-      "pagePath": "pages/itinerary/itinerary",
-      "text": "Itinerary"
-    }, {
+    },  {
       "selectedIconPath": "images/tabbar/user_select.png",
       "iconPath": "images/tabbar/user.png",
       "pagePath": "pages/profile/profile",

@@ -1,5 +1,4 @@
 .banner {
-   background-image: url(http://lc-z1O50gmk.cn-n1.lcfile.com/90b25f3ddf23abb8f764/wallpaper.jpg);
    height: 340rpx;
    width: 100%;
    border-radius: 15rpx;
@@ -23,6 +22,7 @@
    margin-left: 20rpx;
    height: 32%;
 }
+
 .row1 {
 background-color: blue;
 height: 200rpx;

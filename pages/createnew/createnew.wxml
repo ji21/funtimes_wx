@@ -3,7 +3,7 @@
     <view class="header">Create New Itinerary</view>
   </view>
   <view class="search-bar">
-    <image src="../../images/education.png" />
+    <image src="../../images/tabbar/search.png" />
     <view id="space"></view>
     <input type="text" name="search" placeholder="Search" class="search-text" bindinput="hideForm"></input>
   </view>
@@ -22,13 +22,13 @@
         <button form-type="submit" class="create">Create</button>
     </form>
      <!-- {{events[index]}} -->
-    <view class="a-event-card" wx:for="{{events}}" wx:for-item="event" data-id="{{event.id}}">
+    <view class="a-event-card" wx:for="{{events}}" wx:for-item="event" wx:if="{{!event.title.includes(error)}}" data-id="{{event.id}}">
       <image src="{{event.image_link}}"/>
       <view class="info">
         <view id="event-name">{{event.title}}</view>
         <view class="first-div">
           <view class="category">{{event.category}}</view>
-          <view class="time">{{event.time}}, {{event.date}}</view>
+          <view class="time">{{event.period}}, {{event.date}}</view>
         </view>
         <view class="second-div">
           <view id="address">{{event.venue}}</view>

@@ -8,13 +8,6 @@
   display: none;
 }
 
-.bar {
-  padding: 40rpx 10rpx;
-  box-shadow: 10rpx 10rpx 10rpx white;
-  background-image: url(http://lc-z1O50gmk.cn-n1.lcfile.com/e714b736334b7aea9566/wallbanner.jpg);
-  background-size: 100%;
-  }
-
 form {
   margin: 0rpx 0rpx 10rpx 0rpx;
   width: 100%;
@@ -111,3 +104,10 @@ picker {
   color: rgb(138, 136, 136);
 }
 
+.top {
+  background-image: url(/images/shanghai.png);
+  background-size: 100%;
+  width: 100%;
+  padding: 40rpx 10rpx;
+  height: 24rpx;
+}

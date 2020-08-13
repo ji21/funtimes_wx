@@ -17,14 +17,6 @@ page {
   width: 100%;
 }
 
-.top {
-  background-image: url(http://lc-z1O50gmk.cn-n1.lcfile.com/e714b736334b7aea9566/wallbanner.jpg);
-  background-size: 100%;
-  width: 100%;
-  padding: 40rpx 10rpx;
-  height: 24rpx;
-}
-
 .header {
   text-align: center;
   position: fixed;

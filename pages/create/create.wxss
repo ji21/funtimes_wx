@@ -17,8 +17,8 @@ button {
   margin-right: 0rpx!important;
   height: 38%;
   margin-top: 77rpx;
-  border-radius: 44rpx!important;
-  background-color: #fce88e;
+  border-radius: 14rpx!important;
+  background-color: #3BE2AB;
   display: flex;
   align-items: center;
   box-shadow: 10rpx 10rpx 10rpx white;

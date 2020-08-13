@@ -44,8 +44,8 @@ Page({
    data: {
       hide: false,
       todayDate: today,
-      saved: false,
-      wishlist: globalWishlist
+      wishlist: globalWishlist,
+      error: "Error 404"
    },
 
    /**

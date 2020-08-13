@@ -5,9 +5,9 @@
 </view>
 
 <view class="row-between w100 wrap px box-b">
-      <view class="w50 noshrink pa box-b" wx:for="{{images}}">
+      <view class="w50 noshrink pa box-b" wx:for="{{events}}" wx:for-item="event">
          <!-- <view class=""> -->
-            <image mode="aspectFill" class="w100" src="{{item}}"/>
+            <image mode="aspectFill" class="w100" src="{{event.image_link}}"/>
          <!-- </view> -->
       </view>
       <view id="line"></view>
