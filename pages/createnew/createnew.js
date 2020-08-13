@@ -27,7 +27,8 @@ Page({
       hide: false,
       todayDate: today,
       wishlist: globalWishlist,
-      selectList: {}
+      selectList: {},
+      hideList: {}
    },
 
    /**
@@ -102,7 +103,7 @@ Page({
       const selected = this.data.selectList
       for (let prop in selected) {
         if (selected[prop] === true) {
-          list+=prop
+          list.push(prop)
           console.log(prop)
         }
       }
@@ -116,6 +117,7 @@ Page({
         itinerary,
         evint_array: list
       }
+      console.log("this is a", a)
       // console.log(id)
       // console.log(e.detail.value)
       // console.log(list[1])
@@ -151,12 +153,23 @@ Page({
       console.log(this.data.wishlist)
     },
     select: function(e) {
+      e.stop
       const id = e.currentTarget.dataset.id
       const select = this.data.selectList
       select[id] ? select[id] = false : select[id] = true
       this.setData({selectList: select })
-      console.log(this.data.selectList)
+      // console.log(this.data.selectList)
+      // console.log(id)
+      // console.log(this.data.selectList[id])
+    },
+    outOfIdeas: function(e) {
+      const id = e.currentTarget.dataset.id
+      const hide = this.data.hideList
+      hide[id] ? hide[id] = false : hide[id] = true
+      console.log(e)
+      this.setData({hideList: hide })
+      console.log(this.data.hideList)
       console.log(id)
-      console.log(this.data.selectList[id])
+      console.log(this.data.hideList[id])
     }
 })
