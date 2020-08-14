@@ -2,13 +2,14 @@
   "pages":[
     "pages/landing/landing",
     "pages/profile/profile",
-    "pages/itinerary/itinerary",
     "pages/create/create",
-    "pages/mappage/mappage",
     "pages/createnew/createnew",
     "pages/show/show",
     "pages/wishlist/wishlist",
+    "pages/anItinerary/anItinerary",
+    "pages/itineraries/itineraries",
     "pages/logs/logs"
+
   ],
   "window":{
     "backgroundTextStyle":"light",

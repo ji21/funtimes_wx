@@ -4,7 +4,7 @@
     <view id="space"></view>
     <input type="text" name="search" placeholder="Search" class="search-text" bindinput="hideForm"></input>
   </view>
-    <form bindsubmit="goToMappage" class="{{hide? 'hide':''}}">
+    <form bindsubmit="goToItinerary" class="{{hide? 'hide':''}}">
         <view id="title">Create New Itinerary</view>
         <view class="title flex">
           <view id="white-space"></view>
