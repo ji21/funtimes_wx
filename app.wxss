@@ -73,7 +73,7 @@ page {
   z-index: 5;   
   position: absolute;
   bottom: 10rpx;
-  right: 10rpx;
+  right: 15rpx;
 }
 
 #event-name {
