@@ -7,22 +7,27 @@
    text-shadow: white 3rpx 3rpx 10rpx;
    }
 
-   .details .foto{
-      height: 370rpx;
-      width: 400rpx;
-      object-fit: cover;
-      margin-top: 30rpx;
-      box-shadow: 4rpx 4rpx 4rpx lightgrey;
+.details .foto{
+   height: 370rpx;
+   width: 100%;
+   object-fit: cover;
+   margin-top: 30rpx;
+   box-shadow: 4rpx 4rpx 4rpx lightgrey;
 }
 
    .details {
-      margin: 20rpx 40rpx 20rpx 40rpx;
+      margin: 0rpx 20rpx 20rpx 20rpx;
       background-color: white;
       box-shadow: white;
       padding-top: 10rpx;
       padding-bottom: 35rpx;
       padding-left: 35rpx;
       padding-right:35rpx;
+   }
+
+   .title {
+      font-size: 36rpx;
+      font-weight: 400;
    }
    
    .btn {

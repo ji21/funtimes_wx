@@ -1,33 +1,25 @@
 <!--pages/show/show.wxml-->
 <view class="container">
-      <view class="banner text-center flex row justify-around radius20 shadow bold f36">
-        <text> Event Show</text>
-      </view>
 
-<view class="details radius40 flex column">
+<view class="details radius10 flex column">
    <view class="eventfoto flex row-center radius40">
-      <image class="foto radius40" src=" {{image_link}} "></image>
+      <image class="foto radius10" mode="widthFix" src=" {{image_link}} "></image>
    </view>
 
-      <view class="mt40">
-        <label class="mt100 bold ">Title: {{title}}</label>
+      <view class="mt40 title">
+        <label class="mt100 bold ">{{title}}</label>
       </view>
 
       <view class="mt40">
-      <text class="mt100 ">Address: {{venue}}</text>
-      <text> {{address}}
-      </text>
-      <text>
-      Date :{{date}} at {{time}}
-      
-      </text>
-      <text>{{description}}
-
-      </text>
+         <view class="tag">Where?</view> 
+         <view>{{venue}}, {{address}}</view>
       </view>
+      <view class="mt40">
+         <view class="tag">When?</view> 
+         <view>{{time}}, {{period}}</view>
+      </view>
+      <view class="mt40">{{description}}</view>
 
-      <button class="btn" open-type="share" bindtap="onShareAppMessage">Share
-      </button>
-
-</view>
+      <button class="btn" open-type="share" bindtap="onShareAppMessage">Share</button>
+   </view>
 </view>
