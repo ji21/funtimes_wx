@@ -1,2 +1,41 @@
-<!--pages/anItinerary/anItinerary.wxml-->
-<text>pages/anItinerary/anItinerary.wxml</text>
+<view class="container">
+   <view class="banner text-center flex row justify-around radius20 shadow bold f36">
+      <text> Showing One Itinerary</text>
+   </view>
+   
+   <view>
+      <view class="a-event-card" data-id="{{event.id}}">
+          <image src="{{event.image_link}}"/>
+          <view class="info">
+            <view id="event-name">TItle{{event.title}}</view>
+            <view class="div">
+              <view class="category">Great{{event.category}}</view>
+            </view>
+            <view class="div">
+              <view id="time">...today until tomorrow{{event.period}}</view>
+            </view>
+            <view class="div">
+              <view class="address">...at Century avenue {{event.venue}}</view>
+            </view>
+          </view>
+      </view>
+   </view>
+   
+      <view>
+      <view class="a-event-card" data-id="{{event.id}}">
+          <image src="{{event.image_link}}"/>
+          <view class="info">
+            <view id="event-name">TItle{{event.title}}</view>
+            <view class="div">
+              <view class="category">Great{{event.category}}</view>
+            </view>
+            <view class="div">
+              <view id="time">...today until tomorrow{{event.period}}</view>
+            </view>
+            <view class="div">
+              <view class="address">...at Century avenue {{event.venue}}</view>
+            </view>
+          </view>
+      </view>
+   </view>
+</view>

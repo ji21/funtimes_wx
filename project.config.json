@@ -127,6 +127,26 @@
 					"pathName": "pages/itinerary/itinerary",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "OneItinerary",
+					"pathName": "pages/anItinerary/anItinerary",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/itineraries/itineraries",
+					"pathName": "pages/itineraries/itineraries",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/anItinerary/anItinerary",
+					"pathName": "pages/anItinerary/anItinerary",
+					"scene": null
 				}
 			]
 		}
