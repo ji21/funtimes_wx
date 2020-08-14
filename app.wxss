@@ -44,6 +44,7 @@ page {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  position: relative;
 }
 
 .a-event-card > image {
@@ -61,7 +62,6 @@ page {
   width: 60%;
   position: relative;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 #heart {
@@ -71,13 +71,18 @@ page {
   width: 50rpx;
   height: 50rpx;
   z-index: 5;   
-  margin-inline-end: 20rpx;
+  position: absolute;
+  bottom: 10rpx;
+  right: 10rpx;
 }
 
 #event-name {
   width: 100%;
-  /* border: 1px solid black; */
   font-size: 30rpx;
+  height: 50rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .first-div {
@@ -101,31 +106,34 @@ page {
   color: white;
 }
 
-.time {
+#time {
+  padding: 10rpx 20rpx 10rpx 16rpx;
   border-radius: 20rpx;
-  text-transform: capitalize;
-  text-overflow: ellipsis;
-  height: 28rpx;
+  margin-inline-end: 12rpx;
   overflow: hidden;
   white-space: nowrap;
-  font-size: 22rpx;
+  text-overflow: ellipsis;
+  color: black;  
 }
 
 .second-div {
-  height:42rpx;
-  /* border: 1px solid black; */
-  font-size: 22rpx;
   width: 100%;
   display: flex;
+  font-size: 22rpx;
+  justify-content: flex-start;
+  margin-top: 28rpx;
   align-items: center;
-  justify-content: space-between;
-  margin-top: 19rpx;
+  
 }
 
-.third-div {
-  /* border: 1px solid black; */
-  font-size: 22rpx;
+.div {
   width: 100%;
+  display: flex;
+  font-size: 22rpx;
+  justify-content: flex-start;
+  margin-top: 28rpx;
+  align-items: center;
+  margin-top: 14rpx;
 }
 
 #description {
@@ -138,4 +146,12 @@ page {
   white-space: normal;
 }
 
-
+.address {
+  padding: 10rpx 20rpx 10rpx 16rpx;
+  border-radius: 20rpx;
+  margin-inline-end: 12rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: black;  
+}
