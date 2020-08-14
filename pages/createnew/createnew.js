@@ -96,7 +96,7 @@ Page({
 
    },
 
-   goToMappage: function(e) {
+   goToItinerary: function(e) {
       const name = e.detail.value.title
       const date = e.detail.value.date
       let list = []
@@ -127,7 +127,7 @@ Page({
         data: a,
         success: () => {
           wx.redirectTo({
-            url: '/pages/mappage/mappage',
+            url: '/pages/anItiernary/anItiernary',
           })
         }
       })

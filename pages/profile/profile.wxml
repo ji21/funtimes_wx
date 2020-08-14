@@ -16,7 +16,7 @@
 
 <view class="container">
   <view class="space"></view>
-  <view class="div1" bindtouchend="goToItinerary">
+  <view class="div1" bindtouchend="goToAllItinerary">
     <view class="pair1">
       <image class="list-img" src="../../images/tabbar/list.png"/>
       <view class="list-text">My Itineraries</view>

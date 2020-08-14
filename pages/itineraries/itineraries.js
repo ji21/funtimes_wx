@@ -1,4 +1,4 @@
-// pages/itinerary/itinerary.js
+// pages/itineraries/itineraries.js
 Page({
 
   /**
