@@ -37,7 +37,7 @@
           <image src="{{wishlist[event.id]?'../../images/heart (1).png':'../../images/heart.png'}}" id="heart" data-id="{{event.id}}" catchtap="save"/>
         </view>
         <view id="add-wrapper" class="{{hideList[event.id]? '':'hide'}}">
-          <view id="add-show"> 
+          <view id="add-show">
             <view class="details" bindtouchend="goToShow">Details</view>
             <button class="{{selectList[event.id]? 'red':'green'}}" bindtap="select" data-id="{{event.id}}">{{selectList[event.id]? 'Remove' : 'Add'}}</button>
           </view>

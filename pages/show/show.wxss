@@ -2,34 +2,40 @@
    padding: 30rpx 10rpx;
    background-color: #C0E8FF;
    box-shadow: 0px 10px 45px -15px grey;
-   background-image: url(http://lc-z1O50gmk.cn-n1.lcfile.com/e714b736334b7aea9566/wallbanner.jpg);
+   background-image: url(http://lc-z1O50gmk.cn-n1.lcfile.com/20fa3ff614abf1c5b4f5/skyline1.png);
    background-size: 100%;
+   text-shadow: white 3rpx 3rpx 10rpx;
    }
 
-   .banner {
-      padding: 40rpx 10rpx;
-      box-shadow: 0px 10px 45px -15px grey;
-      background-image: url(http://lc-z1O50gmk.cn-n1.lcfile.com/e714b736334b7aea9566/wallbanner.jpg);
-      background-size: 100%;
-   
-      }
-   
-      .eventfoto{
-         margin: 20rpx 100rpx 20rpx 100rpx;
-         background-color: #FAEBD7;
-         height: 340rpx;
-      }
-   
+   .details .foto{
+      height: 370rpx;
+      width: 400rpx;
+      object-fit: cover;
+      margin-top: 30rpx;
+      box-shadow: 4rpx 4rpx 4rpx lightgrey;
+}
+
    .details {
       margin: 20rpx 40rpx 20rpx 40rpx;
-      height:880rpx;
-      background-color: #E6F8FF;
-      box-shadow: lightblue;
+      background-color: white;
+      box-shadow: white;
       padding-top: 10rpx;
-   
+      padding-bottom: 35rpx;
+      padding-left: 35rpx;
+      padding-right:35rpx;
    }
    
-   
-   
-   
-   
+   .btn {
+      text-align:center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 16rpx;
+      padding-bottom: 16rpx;
+      padding-left: 40rpx;
+      padding-right: 40rpx;
+      border-radius:15rpx;
+      background-color: #00BBFC;
+      color: var(--white);
+    }

@@ -14,7 +14,7 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#3BE2AB",
-    "navigationBarTitleText": "jeff times",
+    "navigationBarTitleText": "FunMapped",
     "navigationBarTextStyle":"black"
   },
   "tabBar": {

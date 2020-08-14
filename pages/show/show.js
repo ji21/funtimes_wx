@@ -1,4 +1,5 @@
 // pages/show/show.js
+
 Page({
 
    /**
@@ -12,14 +13,26 @@ Page({
     * Lifecycle function--Called when page load
     */
    onLoad: function (options) {
+      const page = this
+      const id = options.id
+      console.log('id in show', id)
 
-   },
+      wx.request ({
+         url: `https://funtimes.wogengapp.cn/api/v1/evints/${id}`,
+         success: (res) => {
+            page.setData(res.data)
+            console.log(res)
+            const t = res.data.title
+            console.log(t)
+         }
+      })
+    },
 
    /**
     * Lifecycle function--Called when page is initially rendered
     */
-   onReady: function () {
 
+   onReady: function () {
    },
 
    /**

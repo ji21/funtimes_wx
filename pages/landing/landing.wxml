@@ -1,14 +1,17 @@
 <view class="container">
    <view class="banner ">
-       <view class="weatherbox"> W</view>
+       <!-- <view class="weatherbox"> </view> -->
+       <image class="" src=""/>
    </view>
 </view>
 
 <view class="row-between w100 wrap px box-b">
-      <view class="w50 noshrink pa box-b" wx:for="{{events}}" wx:for-item="event">
+      <view class="photo-box w50 noshrink pa box-b " wx:for="{{events}}" wx:for-item="event">
          <!-- <view class=""> -->
-            <image mode="aspectFill" class="w100" src="{{event.image_link}}"/>
+            <image mode="aspectFill" class="w100 radius20" bindtap="goToShow" data-id="{{event.id}}" src="{{event.image_link}}"/>
          <!-- </view> -->
+         <text class="title1">{{event.title}}</text>
       </view>
       <view id="line"></view>
 </view>
+
