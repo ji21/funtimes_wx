@@ -3,11 +3,10 @@
         <text> My Itineraries</text>
       </view>
       <view class="It-container">
-
       <view class="a-event-card" data-id="{{itinerary.id}}">
           <image src="{{event.image_link}}"/>
           <view class="info">
-            <view id="event-name">My First Itinerary Title{{event.title}}</view>
+            <view id="itinerary-name">My First Itinerary Title{{event.title}}</view>
             <view class="div">
               <view class="title">First event name{{event.venue}}</view>
             </view>
@@ -21,9 +20,6 @@
       </button></view>
           </view>
       </view>
-
-
-
 
       </view>
 </view>

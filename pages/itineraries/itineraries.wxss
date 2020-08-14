@@ -22,7 +22,7 @@
    border-radius: 18rpx;
  }
 
- #event-name {
+ #itinerary-name {
    width: 100%;
    font-size: 30rpx;
    height: 50rpx;
@@ -48,7 +48,6 @@
       background-color: #3BE2AB;
       color: var(--white);
 }
-
 
 .title {
    padding: 10rpx 20rpx 10rpx 16rpx;
