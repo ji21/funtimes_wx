@@ -105,7 +105,7 @@ picker {
 }
 
 .top {
-  background-image: url(/images/shanghai.png);
+  background-image: url(http://lc-z1O50gmk.cn-n1.lcfile.com/20fa3ff614abf1c5b4f5/skyline1.png);
   background-size: 100%;
   width: 100%;
   padding: 40rpx 10rpx;

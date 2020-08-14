@@ -114,7 +114,7 @@ Page({
    },
 
    goToMappage: function() {
-      wx.redirectTo({
+      wx.navigateTo({
         url: '/pages/mappage/mappage',
       })
     },
@@ -137,5 +137,21 @@ Page({
       globalWishlist[id] ? globalWishlist[id] = false : globalWishlist[id] = true
       this.setData({wishlist: globalWishlist})
       console.log(this.data.wishlist)
-    }
+    },
+
+    goToShow: function(e) {
+      console.log(e)
+      let id = e.currentTarget.dataset.id
+      console.log(e.currentTarget.dataset.id)
+     wx.navigateTo({
+     url: `/pages/show/show?id=${id}`,
+    })
+
+   }
+
+
+
+
+
+
 })

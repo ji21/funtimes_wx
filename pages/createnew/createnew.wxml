@@ -22,7 +22,7 @@
         <button form-type="submit" class="create">Create</button>
     </form>
      <!-- {{events[index]}} -->
-    <view class="a-event-card" wx:for="{{events}}" wx:for-item="event" wx:if="{{!event.title.includes(error)}}" data-id="{{event.id}}">
+    <view class="a-event-card" bindtap="goToShow" wx:for="{{events}}" wx:for-item="event" wx:if="{{!event.title.includes(error)}}" data-id="{{event.id}}">
       <image src="{{event.image_link}}"/>
       <view class="info">
         <view id="event-name">{{event.title}}</view>
