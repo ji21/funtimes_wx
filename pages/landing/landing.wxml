@@ -13,8 +13,7 @@
          <!-- <view class=""> -->
             <image mode="aspectFill" class="w100 radius10" bindtap="goToShow" data-id="{{event.id}}" src="{{event.image_link}}"/>
          <!-- </view> -->
-         <text class="title1">{{event.title}}</text>
+            <text class="title1">{{event.title}}</text>
       </view>
       <view id="line"></view>
 </view>
-

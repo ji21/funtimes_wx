@@ -1,2 +1,25 @@
-<!--pages/itineraries/itineraries.wxml-->
-<text>pages/itineraries/itineraries.wxml</text>
+<view class="container">
+      <view class="banner text-center flex row justify-around radius20 shadow bold f36">
+        <text> My Itineraries</text>
+      </view>
+      <view class="It-container">
+      <view class="a-event-card" data-id="{{itinerary.id}}">
+          <image src="{{event.image_link}}"/>
+          <view class="info">
+            <view id="itinerary-name">My First Itinerary Title{{event.title}}</view>
+            <view class="div">
+              <view class="title">First event name{{event.venue}}</view>
+            </view>
+            <view class="div">
+              <view class="title">Second event name {{event.venue}}</view>
+            </view>
+            <view class="div">
+              <view class="title">Third event name {{event.venue}}</view>
+            </view>
+            <view><button class="btn" open-type="share" bindtap="onShareAppMessage">Share
+      </button></view>
+          </view>
+      </view>
+
+      </view>
+</view>

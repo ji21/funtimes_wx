@@ -45,6 +45,9 @@ page {
   align-items: center;
   justify-content: space-around;
   position: relative;
+  background-color: white;
+  margin-top: 5rpx;
+  margin-bottom: 5rpx;
 }
 
 .a-event-card > image {

@@ -1,1 +1,60 @@
-/* pages/itineraries/itineraries.wxss */
+.banner{
+   padding: 30rpx 10rpx;
+   background-color: #C0E8FF;
+   box-shadow: 0px 10px 45px -15px grey;
+   background-image: url(http://lc-z1O50gmk.cn-n1.lcfile.com/20fa3ff614abf1c5b4f5/skyline1.png);
+   background-size: 100%;
+   text-shadow: white 3rpx 3rpx 10rpx;
+   }
+
+.a-event-card {
+   margin-top: 15rpx;
+   margin-bottom: 15rpx;
+   border-radius: 10rpx;
+   box-shadow: grey 2rpx 2rpx 5rpx;
+}
+
+.a-event-card > image {
+   /* border: 1px solid black; */
+   height: 88%;
+   width: 35%;
+   border-radius: 10rpx;
+   border-radius: 18rpx;
+ }
+
+ #itinerary-name {
+   width: 100%;
+   font-size: 30rpx;
+   height: 50rpx;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+ }
+
+.btn{
+      text-align:center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10rpx;
+      padding-top: 16rpx;
+      padding-bottom: 16rpx;
+      padding-left: 40rpx;
+      padding-right: 40rpx;
+      border-radius:15rpx;
+      height: 50rpx;
+      width: 180rpx;
+      background-color: #3BE2AB;
+      color: var(--white);
+}
+
+.title {
+   padding: 10rpx 20rpx 10rpx 16rpx;
+   border-radius: 20rpx;
+   margin-inline-end: 12rpx;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   color: black;  
+ }
