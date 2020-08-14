@@ -5,17 +5,17 @@ const globalWishlist = app.globalData.wishlist
 var today = new Date();
 
 var dd = today.getDate();
-var mm = today.getMonth()+1; 
+var mm = today.getMonth()+1;
 var yyyy = today.getFullYear();
-if(dd<10) 
+if(dd<10)
 {
     dd='0'+dd;
-} 
+}
 
-if(mm<10) 
+if(mm<10)
 {
     mm='0'+mm;
-} 
+}
 today = yyyy+'-'+mm+'-'+dd;
 
 Page({
@@ -137,7 +137,7 @@ Page({
       this.setData({hide: true})
       if (e.detail.value == "") {
         this.setData({hide: false})
-      } 
+      }
     },
     bindDateChange: function(e) {
       this.setData({
@@ -171,5 +171,15 @@ Page({
       console.log(this.data.hideList)
       console.log(id)
       console.log(this.data.hideList[id])
-    }
+    },
+
+    goToShow: function(e) {
+      console.log(e)
+      let id = e.currentTarget.dataset.id
+      console.log(e.currentTarget.dataset.id)
+     wx.navigateTo({
+     url: `/pages/show/show?id=${id}`,
+    })
+
+   }
 })

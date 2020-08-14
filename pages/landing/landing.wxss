@@ -1,18 +1,37 @@
 .banner {
-   height: 340rpx;
+   height: 400rpx;
    width: 100%;
    border-radius: 15rpx;
    display: cover;
+   background-image: url(http://lc-z1O50gmk.cn-n1.lcfile.com/99dc0e13b0c5161c6147/shanghai%20sun.jpg);
    background-size: 100%;
    box-shadow: 2rpx 2rpx 4rpx lightgrey;
 }
 
+.photo-box {
+   position: relative;
+   display: inline-block;
+}
+
+
+.photo-box .title1{
+   position: absolute;
+   color: white;
+   margin-top: 308rpx;
+   margin-left: -331rpx;
+   margin-right: 6rpx;
+   text-shadow: black 2rpx 2rpx 25rpx;
+
+
+}
+
+
 .container .banner .weatherbox {
-   background-color: lightpink;
+   background-color: #F6F6F6;
    height:100rpx;
    width:100rpx;
    border-radius: 40%;
-   margin: 40rpx 50rpx 0rpx 600rpx;
+   margin: 0rpx 50rpx 0rpx 600rpx;
 }
 
 .cards{
