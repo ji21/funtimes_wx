@@ -11,12 +11,13 @@
       </view>
 
       <view class="mt40">
-         <view class="tag">Where?</view> 
-         <view>{{venue}}, {{address}}</view>
-      </view>
-      <view class="mt40">
-         <view class="tag">When?</view> 
+         <view class="taggy1">Time</view> 
          <view>{{time}}, {{period}}</view>
+      </view>
+
+      <view class="mt40">
+         <view class="taggy2">Address</view> 
+         <view>{{venue}}, {{address}}</view>
       </view>
       <view class="mt40">{{description}}</view>
 

@@ -1,14 +1,11 @@
 <view class="container">
-   <view class="banner ">
-       <!-- <view class="weatherbox"> </view> -->
-       <image class="" src=""/>
-   </view>
+
 </view>
 
 <view class="search-bar">
    <image src="../../images/tabbar/search.png" />
    <view id="space"></view>
-   <input type="text" name="search" placeholder="Search" class="search-text" bindinput="hideForm"></input>
+   <input type="text" name="search" placeholder="Search for new exciting events in Shanghai" class="search-text" bindinput="hideForm"></input>
 </view>
 
 <view class="row-between w100 wrap px box-b">

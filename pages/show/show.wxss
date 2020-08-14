@@ -43,4 +43,24 @@
       border-radius:15rpx;
       background-color: #00BBFC;
       color: var(--white);
+      margin-top: 80rpx;
     }
+
+    .taggy1 {
+      background-color: #3BE2AB;
+      color: white;
+      width: 70rpx;
+      padding: 8rpx 15rpx;
+      border-radius: 20rpx;
+      margin-bottom: 12rpx;
+    }
+
+    .taggy2 {
+      background-color: #3BE2AB;
+      color: white;
+      width: 115rpx;
+      padding: 5rpx 15rpx;
+      border-radius: 20rpx;  
+      margin-bottom: 12rpx;    
+    }
+

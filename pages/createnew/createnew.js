@@ -127,7 +127,7 @@ Page({
         data: a,
         success: () => {
           wx.redirectTo({
-            url: '/pages/anItiernary/anItiernary',
+            url: '/pages/anItinerary/anItinerary',
           })
         }
       })
