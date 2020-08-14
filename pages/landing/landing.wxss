@@ -65,7 +65,30 @@ flex-direction: row;
    width: 200rpx;
 }
 
-
+.search-bar {
+   width: 100%;
+   height: 96rpx;
+   display: flex;
+   background-color: white;
+   align-items: center;
+   margin-top: 10rpx;
+ }
+ 
+ .search-text {
+   height: 100%;
+   width: 79%;
+ }
+ 
+ .search-bar > image {
+   height: 75%;
+   width: 10%;
+   padding-left: 24rpx;
+ }
+ 
+ #space {
+   height: 100%;
+   width: 4%;
+ }
 
 
 

@@ -110,7 +110,7 @@ page {
 }
 
 #time {
-  padding: 10rpx 20rpx 10rpx 16rpx;
+  padding: 10rpx 20rpx 0rpx 16rpx;
   border-radius: 20rpx;
   margin-inline-end: 12rpx;
   overflow: hidden;
@@ -134,9 +134,7 @@ page {
   display: flex;
   font-size: 22rpx;
   justify-content: flex-start;
-  margin-top: 28rpx;
   align-items: center;
-  margin-top: 14rpx;
 }
 
 #description {

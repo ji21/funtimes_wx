@@ -38,7 +38,7 @@
         </view>
         <view id="add-wrapper" class="{{hideList[event.id]? '':'hide'}}">
           <view id="add-show">
-            <view class="details" bindtouchend="goToShow" data-id="{{event.id}}" >Details</view>
+            <view class="details" bindtouchend="goToShow" data-id="{{event.id}}">Details</view>
             <button class="{{selectList[event.id]? 'red':'green'}}" bindtap="select" data-id="{{event.id}}">{{selectList[event.id]? 'Remove' : 'Add'}}</button>
           </view>
         </view>
