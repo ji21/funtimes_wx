@@ -1,6 +1,0 @@
-<view class="container">
-      <view class="banner text-center flex row justify-around radius10">
-            <text class="f36 bold">My Wishlist</text>
-      </view>
-
-</view>

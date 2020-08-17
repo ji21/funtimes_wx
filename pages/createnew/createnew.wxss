@@ -10,7 +10,7 @@
 
 form {
   margin: 0rpx 0rpx 10rpx 0rpx;
-  width: 100%;
+  width: 95%;
   padding-bottom: 25rpx;
 }
 
@@ -18,7 +18,7 @@ form {
   margin-top: 10rpx;
   background-color: #3BE2AB;
   color: white;
-  width: 98%!important;
+  width: 100%!important;
   margin-left: 0rpx;
   margin-right: 0rpx;
   height:100rpx;
@@ -28,9 +28,9 @@ form {
 }
 
 .title {
-  margin: 0rpx 40rpx 8rpx 0rpx;
+  margin: 0rpx 0rpx 8rpx 0rpx;
   height: 100rpx;
-  width: 99%;
+  padding-left: 8rpx;
 }
 
 .title > input {
@@ -38,6 +38,7 @@ form {
   border-top-right-radius: 14rpx;
   border-bottom-right-radius: 14rpx;
   height: 100%;
+  padding-left: 28rpx;
 }
 
 #white-space {
@@ -120,6 +121,7 @@ picker {
   padding-top: 20rpx;
   padding-bottom: 20rpx;
   color: rgb(138, 136, 136);
+  width: 100%;
 }
 
 #add-wrapper{

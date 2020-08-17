@@ -1,5 +1,6 @@
 // pages/landing/landing.js
 const app = getApp()
+const host = app.globalData.host
 
 Page({
 
@@ -7,6 +8,7 @@ Page({
    * Page initial data
    */
   data: {
+    hide: true
   },
 
   /**
@@ -79,5 +81,29 @@ Page({
     wx.navigateTo({
       url: `/pages/show/show?id=${id}`,
     })
+  },
+  search: function() {
+    console.log(this.data.input)
+    const query2 = this.data.input 
+    const q = {query: query2}
+    console.log("q->", q)
+    wx.request({
+      url: host + 'evints',
+      method: "GET",
+     data: q,
+      success: (res) => {
+       console.log(res.data);
+       this.setData({events: res.data})
+      }
+    })
+  },
+  hideForm: function(e) {
+    console.log(e)
+    // console.log(e.detail.value);
+    this.setData({hide: false, input: e.detail.value})
+    if (e.detail.value == "") {
+      this.setData({hide: true})
+      this.search()
+    }
   }
 })

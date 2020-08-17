@@ -13,8 +13,8 @@
 .log-in {
    position: fixed;
    top: 68rpx;
-   height: 61rpx;
-   width: 252rpx;
+   height: 90rpx;
+   width: 286rpx;
    left: 60rpx;
    font-size: 38rpx;  
    background-color: #3BE2AB!important;
@@ -51,7 +51,12 @@
    align-items: center;
 }
 
-.list-img {
+.pair1 > .list-img {
+   height: 64%;
+   width: 88rpx;
+}
+
+.pair2 > .list-img {
    height: 80%;
    width: 88rpx;
 }

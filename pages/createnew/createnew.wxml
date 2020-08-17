@@ -1,6 +1,6 @@
 <view class="container">
   <view class="search-bar">
-    <image src="../../images/tabbar/search.png" />
+    <image mode="aspectFit" src="../../images/tabbar/search.png" />
     <view id="space"></view>
     <input type="text" name="search" placeholder="Search" class="search-text" bindinput="hideForm"></input>
   </view>

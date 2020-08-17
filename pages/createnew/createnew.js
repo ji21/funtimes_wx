@@ -138,6 +138,7 @@ Page({
       this.setData({hide: true, input: e.detail.value})
       if (e.detail.value == "") {
         this.setData({hide: false})
+        this.search(false)
       }
     },
     bindDateChange: function(e) {
@@ -182,9 +183,10 @@ Page({
         url: `/pages/show/show?id=${id}`,
       })
    },
-   search: function() {
+   search: function(a = true) {
      console.log(this.data.input)
-     const query1 = this.data.todayDate
+     let query1 = this.data.todayDate
+     if (a===false) query1 = ""
      const query2 = this.data.input 
      const q = {date: query1, query: query2}
      console.log("q->", q)

@@ -25,7 +25,7 @@
   </view>
   <view class="div2" bindtouchend="goToWishlist">
     <view class="pair2">
-      <image class="list-img2" src="../../images/heart (2).png"/>
+      <image class="list-img2" mode="aspectFit" src="../../images/heart (2).png"/>
       <view class="list-text2">My wishlist</view>
     </view>
     <image class="next" src="../../images/next.png"/>
