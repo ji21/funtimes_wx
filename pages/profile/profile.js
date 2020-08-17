@@ -14,7 +14,16 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    wx.request({
+      url: 'https://funtimes.wogengapp.cn/api/v1/evints',
+      success: async (res) => {
+        console.log(res.data);
+        this.setData({events: res.data})
+        // for (x of this.events) {
+        //   globalWishlist[x.id] = false;
+        // }
+      }
+    })
   },
 
   /**

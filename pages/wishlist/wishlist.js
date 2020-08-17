@@ -1,3 +1,5 @@
+const app = getApp()
+
 // pages/wishlist/wishlist.js
 Page({
 
@@ -5,14 +7,24 @@ Page({
    * Page initial data
    */
   data: {
-
+    hide: true
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    this.setData({check: app.globalData.wishlist})
+    wx.request({
+      url: 'https://funtimes.wogengapp.cn/api/v1/evints',
+      success: async (res) => {
+        console.log(res.data);
+        this.setData({events: res.data})
+        // for (x of this.events) {
+        //   globalWishlist[x.id] = false;
+        // }
+      }
+    })
   },
 
   /**
@@ -62,5 +74,23 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  goToShow: function(e) {
+    console.log(e)
+    let id = e.currentTarget.dataset.id
+    console.log(e.currentTarget.dataset.id)
+    wx.navigateTo({
+      url: `/pages/show/show?id=${id}`,
+    })
+ },
+ remove: function(e) {
+   console.log(e.currentTarget.dataset.id)
+   const id = e.currentTarget.dataset.id
+   app.globalData.wishlist[id] = false
+   wx.reLaunch({
+     url: '/pages/wishlist/wishlist',
+     success: (res) => {console.log(1)}
+   })
+   console.log(this.data.check)
+ }
 })

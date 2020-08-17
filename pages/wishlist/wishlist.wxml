@@ -1,0 +1,27 @@
+<view class="profile-top"> 
+  <view id="it">My Wishlist</view>
+</view>
+
+<view style="height: 180rpx"></view>
+
+<view class="container">
+      <view class="wrapper {{selectList[event.id]? 'green-border':''}}" wx:for="{{events}}" wx:for-item="event" wx:if="{{check[event.id]}}" data-id="{{event.id}}" bindtap="goToShow">
+            <view class="a-event-card" data-id="{{event.id}}">
+            <image src="{{event.image_link ? event.image_link : '/images/funmapped logo.png'}}"/>
+            <view class="info">
+                  <view id="event-name">{{event.title}}</view>
+                  <view class="div">
+                  <view class="category">{{event.category}}</view>
+                  </view>
+                  <view class="div">
+                  <view id="time">...{{event.period}}</view>
+                  </view>
+                  <view class="div">
+                  <view class="address">...at {{event.venue}}</view>
+                  </view>
+            </view>
+            <button id="jfk" catchtap="remove" data-id="{{event.id}}">Remove</button>
+            </view>
+      </view>
+      <view style="height: 100rpx"></view>
+    </view>
