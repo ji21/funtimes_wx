@@ -107,7 +107,7 @@ page {
   white-space: nowrap;
   text-overflow: ellipsis;
   color: white;
-  text-shadow: 1rpx 1rpx 1rpx rgb(105, 102, 102);
+  text-shadow: 3rpx 0rpx 0rpx rgb(105, 102, 102);
 }
 
 #time {

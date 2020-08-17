@@ -95,6 +95,13 @@ flex-direction: row;
    width: 4%;
  }
 
-
+#search {
+   background-color: red!important;
+   width: 393px!important;
+   margin-top: 15rpx;
+   margin-bottom: 15rpx;
+   font-weight: 400;
+   color: white;
+}
 
 

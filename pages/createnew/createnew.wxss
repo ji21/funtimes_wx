@@ -24,7 +24,7 @@ form {
   height:100rpx;
   padding-top:26rpx;
   font-weight: 400;
-  text-shadow: 1rpx 1rpx 1rpx rgb(160, 157, 157);
+  text-shadow: 3rpx 0rpx 0rpx rgb(105, 102, 102);
 }
 
 .title {
@@ -82,7 +82,7 @@ picker {
   border-radius: 4rpx;
   box-sizing: border-box;
   padding-left: 19rpx;
-  padding-top: 24rpx;
+  padding-top: 36rpx;
   padding-right: 124rpx;
   color: rgb(148, 145, 145);
 }
@@ -95,7 +95,6 @@ picker {
 }
 
 .picker-div > view {
-  background: white;
   height: 100%;
   padding-right: 48rpx;
   border-radius: 4rpx;

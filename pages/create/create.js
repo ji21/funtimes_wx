@@ -5,7 +5,7 @@ Page({
    * Page initial data
    */
   data: {
-
+    hide: true
   },
 
   /**
@@ -67,6 +67,12 @@ Page({
     wx.navigateTo({
       url: '/pages/createnew/createnew',
     })
+  },
+  rehide: function() {
+    this.setData({hide: true})
+  },
+  show: function() {
+    this.setData({hide: false})
   }
 
 })

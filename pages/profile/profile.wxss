@@ -134,7 +134,7 @@
    height: 100%;
    width: 371rpx!important;
    display: flex;
-   flex-direction: column;
+   align-items: center;
 }
 
 .nick-name {

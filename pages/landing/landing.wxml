@@ -1,7 +1,3 @@
-<view class="container">
-
-</view>
-
 <view class="search-bar">
    <image mode="aspectFit" src="../../images/tabbar/search.png" />
    <view id="space"></view>

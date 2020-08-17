@@ -1,11 +1,17 @@
 <!--pages/create/create.wxml-->
+<view class="pop {{hide? 'hide': ''}}" catchtap="rehide">
+  <view class="pop-up {{hide? 'hide': ''}}">
+    <view class="pop1"></view>
+  </view>
+</view>
+
 <view class="container">
   <button bindtap="goToCreateNew"> 
     <image src="../../images/create/strategic-plan.png" />
     <view class="text">Plan and Share an Itinerary</view>
   </button>
 
-  <button > 
+  <button bindtap="show"> 
     <image src="../../images/create/wheel.png" />
     <view class="text">Generate a randomised itinerary</view>
   </button>

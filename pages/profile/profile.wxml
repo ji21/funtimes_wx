@@ -5,10 +5,6 @@
       <image src=""/>
       <view class="user-info-text">
         <view class="nick-name">Jeffrey</view>
-        <view class="gender-country">
-          <view class="gender">🙎🏻‍♂️</view>
-          <view class="country">United Kingdom</view>
-        </view>
       </view>
     </view>
   </view>
