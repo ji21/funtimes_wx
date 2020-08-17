@@ -146,6 +146,13 @@
 					"id": -1,
 					"name": "pages/anItinerary/anItinerary",
 					"pathName": "pages/anItinerary/anItinerary",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "it",
+					"pathName": "pages/itineraries/itineraries",
 					"scene": null
 				}
 			]

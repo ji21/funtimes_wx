@@ -53,7 +53,7 @@ page {
 .a-event-card > image {
   /* border: 1px solid black; */
   height: 88%;
-  width: 35%;
+  width: 42%;
   border-radius: 10rpx;
   border-radius: 18rpx;
 }
@@ -62,7 +62,7 @@ page {
   display: flex;
   /* border: 1px solid black; */
   height: 88%;
-  width: 60%;
+  width: 47%;
   position: relative;
   flex-direction: column;
 }

@@ -1,25 +1,24 @@
-<view class="container">
-      <view class="banner text-center flex row justify-around radius20 shadow bold f36">
-        <text> My Itineraries</text>
-      </view>
-      <view class="It-container">
-      <view class="a-event-card" data-id="{{itinerary.id}}">
-          <image src="{{event.image_link}}"/>
-          <view class="info">
-            <view id="itinerary-name">My First Itinerary Title{{event.title}}</view>
-            <view class="div">
-              <view class="title">First event name{{event.venue}}</view>
+<view class="profile-top"> 
+  <view id="it">My Itineraries</view>
+</view>
+
+<view class="container"> 
+      <view style="height: 188rpx"></view>  
+      <view class="it-container">
+      <view class="card-it" data-id="{{itinerary.id}}" wx:for="{{itineraries}}" wx:for-item="it">
+          <image class="xyz noshrink" src="{{it.activities[0].image ? it.activities[0].image : '/images/funmapped logo.png' }}"/>
+          <view class="info-it column-between grow">
+            <view>
+              <view id="itinerary-name">{{it.name}}</view>
+              <view class="divy">
+                <view class="a" wx:for="{{it.activities}}" wx:for-item="act">
+                  <view class="title">{{act.title}}</view>
+                </view>
+              </view>
             </view>
-            <view class="div">
-              <view class="title">Second event name {{event.venue}}</view>
-            </view>
-            <view class="div">
-              <view class="title">Third event name {{event.venue}}</view>
-            </view>
-            <view><button class="btn" open-type="share" bindtap="onShareAppMessage">Share
-      </button></view>
+            <view class="abcde"><button class="btn" open-type="share" bindtap="onShareAppMessage">Share</button></view>
           </view>
       </view>
-
-      </view>
+    <view style="height: 100rpx"></view>
+  </view>
 </view>

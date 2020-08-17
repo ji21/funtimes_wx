@@ -166,3 +166,14 @@ picker {
 #card-container {
 
 }
+
+#search {
+  width: 98%;
+  background-color: rgb(52, 178, 252);
+  color: white;
+  height: 112rpx!important;
+  margin-top: 10rpx!important;
+  margin-bottom: 10rpx!important;
+  padding-top: 28rpx;
+  font-weight: 450;
+}

@@ -1,4 +1,6 @@
 // pages/itineraries/itineraries.js
+const app = getApp()
+const host = app.globalData.host
 Page({
 
   /**
@@ -12,7 +14,36 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
+    //
+    const page = this
+    if (app.globalData.userId) {
+      const id = app.globalData.userId
+      wx.request({
+        url: host + `/itineraries/?user_id=${id}`,
+        success: (res) => {
+          console.log(res.data[0].activities[0])
+          page.setData({itineraries: res.data})
+        }
+      }) 
+    } else {
+      app.userIdCallback = () => {
+        const id = app.globalData.userId
+        wx.request({
+          url: host + `/itineraries/?user_id=${id}`,
+          success: (res) => {
+            page.setData({itineraries: res.data})
+          }
+        })
+      }
+    }
+    //
+    // wx.request({
+    //   url: host + `/itineraries/?user_id=${id}`,
+    //   success: (res) => {
+    //     console.log(res.data)
+    //     this.setData({itineraries: res.data})
+    //   }
+    // })
   },
 
   /**

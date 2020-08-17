@@ -11,6 +11,7 @@
 .photo-box {
    position: relative;
    display: inline-block;
+   
 }
 
 
@@ -21,8 +22,7 @@
    margin-left: -331rpx;
    margin-right: 6rpx;
    text-shadow: black 2rpx 2rpx 25rpx;
-
-
+   bottom: 38rpx;
 }
 
 

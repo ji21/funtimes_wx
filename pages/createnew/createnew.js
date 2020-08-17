@@ -127,14 +127,15 @@ Page({
         data: a,
         success: () => {
           wx.redirectTo({
-            url: '/pages/anItinerary/anItinerary',
+            url: '/pages/itineraries/itineraries',
           })
         }
       })
     },
     hideForm: function(e) {
-      console.log(e.detail.value);
-      this.setData({hide: true})
+      console.log(e)
+      // console.log(e.detail.value);
+      this.setData({hide: true, input: e.detail.value})
       if (e.detail.value == "") {
         this.setData({hide: false})
       }
@@ -180,6 +181,21 @@ Page({
       wx.navigateTo({
         url: `/pages/show/show?id=${id}`,
       })
-
+   },
+   search: function() {
+     console.log(this.data.input)
+     const query1 = this.data.todayDate
+     const query2 = this.data.input 
+     const q = {date: query1, query: query2}
+     console.log("q->", q)
+     wx.request({
+       url: host + 'evints',
+       method: "GET",
+      data: q,
+       success: (res) => {
+        console.log(res.data);
+        this.setData({events: res.data})
+       }
+     })
    }
 })

@@ -3,7 +3,7 @@
 
 <view class="details radius10 flex column">
    <view class="eventfoto flex row-center radius40">
-      <image class="foto radius10" mode="widthFix" src=" {{image_link}} "></image>
+      <image class="foto radius10" mode="widthFix" src=" {{image_link? image_link : '/images/funmapped logo.png'}} "></image>
    </view>
 
       <view class="mt40 title">
@@ -19,7 +19,7 @@
          <view class="taggy2">Address</view> 
          <view>{{venue}}, {{address}}</view>
       </view>
-      <view class="mt40">{{description}}</view>
+      <view class="mt40">{{description === 'Not available'? '' : description}}</view>
 
       <button class="btn" open-type="share" bindtap="onShareAppMessage">Share</button>
    </view>
