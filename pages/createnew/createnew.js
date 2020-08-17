@@ -117,7 +117,7 @@ Page({
         itinerary,
         evint_array: list
       }
-      console.log("this is a", a)
+      console.log("this is a -------------------------", a)
       // console.log(id)
       // console.log(e.detail.value)
       // console.log(list[1])

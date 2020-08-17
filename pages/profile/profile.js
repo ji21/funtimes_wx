@@ -86,5 +86,9 @@ Page({
   },
   getUserInfo: function(e) {
     console.log(e.detail.rawData)
+    this.setData({logIn: true})
+  },
+  logOut: function() {
+    this.setData({logIn: false})
   }
 })

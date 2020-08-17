@@ -19,7 +19,7 @@ Page({
     if (app.globalData.userId) {
       const id = app.globalData.userId
       wx.request({
-        url: host + `/itineraries/?user_id=${id}`,
+        url: host + `itineraries/?user_id=${id}`,
         success: (res) => {
           console.log(res.data[0].activities[0])
           page.setData({itineraries: res.data})

@@ -1,12 +1,4 @@
-.banner {
-   height: 400rpx;
-   width: 100%;
-   border-radius: 15rpx;
-   display: cover;
-   background-image: url(http://lc-z1O50gmk.cn-n1.lcfile.com/99dc0e13b0c5161c6147/shanghai%20sun.jpg);
-   background-size: 100%;
-   box-shadow: 2rpx 2rpx 4rpx lightgrey;
-}
+
 
 .photo-box {
    position: relative;
@@ -96,7 +88,7 @@ flex-direction: row;
  }
 
 #search {
-   background-color: red!important;
+   background-color: #3BE2AB!important;
    width: 393px!important;
    margin-top: 15rpx;
    margin-bottom: 15rpx;

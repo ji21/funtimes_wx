@@ -26,5 +26,5 @@
     </view>
     <image class="next" src="../../images/next.png"/>
   </view>
-  <button class="log-out {{logIn?'':'hide'}}">Log out</button>
+  <button class="log-out {{logIn?'':'hide'}}" bindtap="logOut">Log out</button>
 </view>
