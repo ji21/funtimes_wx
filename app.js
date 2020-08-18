@@ -50,7 +50,7 @@ App({
     userInfo: null,
     host: "https://funtimes.wogengapp.cn/api/v1/",
     // host: "http://localhost:3000/api/v1/",
-    wishlist: {},
+    wishlist: {}
   },
 
   getHost() {

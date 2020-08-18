@@ -9,7 +9,7 @@ Page({
    */
   data: {
     hide: true,
-    array: ["Nightlife", "Arts", "Sports", "Dining", "Community", "Other"],
+    array: ["Arts", "Community", "Sports", "Dining", "Nightlife", "Other"],
     color: [false, false, false, false, false, false],
     counter: 0,
     z: false
@@ -117,21 +117,25 @@ Page({
         arr.push(this.data.array[i])
       }
     }
-    const data = {category_array: arr}
     console.log(arr)
+    let s =  ``
+    for (let i = 0; i<arr.length; i++) {
+      s+= `category_array[]=${arr[i]}&`
+    }
+    s = s.slice(0, s.length-1)
+    console.log(s)
     wx.request({
-      url: "https://funtimes.wogengapp.cn/api/v1/randomizer",
-      data: arr,
+      url: `https://funtimes.wogengapp.cn/api/v1/randomizer?${s}`,
       success: (res) => {
-        console.log(res)
+        console.log(res.data)
         app.globalData.randomArr = res.data.evints
         console.log(res.data.evints)
-        wx.redirectTo({
+        wx.navigateTo({
           url: '/pages/random/random',
         })
       }
     })
-    console.log(arr);
+    console.log("updated", app.globalData.randomArr)
   }
 })
 
