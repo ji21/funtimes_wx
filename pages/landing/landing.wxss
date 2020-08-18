@@ -96,4 +96,10 @@ flex-direction: row;
    color: white;
 }
 
+/* .banner {
+   background-image: url('https://cn.bing.com/images/search?view=detailV2&ccid=%2fdAO1gSn&id=6F643DED59CB7DAAD8C155FE092957134C6AF812&thid=OIP._dAO1gSntl68CbAmH1QMVQHaE8&mediaurl=http%3a%2f%2finews.gtimg.com%2fnewsapp_match%2f0%2f455010228%2f0&exph=667&expw=1000&q=%e4%b8%8a%e6%b5%b7gif%e5%9b%be&simid=608050232541384476&ck=71A777E7D53C7CBA81FB9353A3E122FA&selectedIndex=0&qpvt=%e4%b8%8a%e6%b5%b7gif%e5%9b%be&FORM=IRPRST');
+   width: 100vw;
+   height: 150rpx;
+} */
+
 
