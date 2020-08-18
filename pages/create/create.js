@@ -2,24 +2,6 @@
 const app = getApp();
 const host = app.globalData.host
 const globalWishlist = app.globalData.wishlist
-var today = new Date();
-
-var dd = today.getDate();
-var mm = today.getMonth()+1;
-var yyyy = today.getFullYear();
-if(dd<10)
-{
-    dd='0'+dd;
-}
-
-if(mm<10)
-{
-    mm='0'+mm;
-}
-today = yyyy+'-'+mm+'-'+dd;
-
-
-
 Page({
 
   /**
@@ -27,9 +9,10 @@ Page({
    */
   data: {
     hide: true,
-    todayDate: today,
-    array: ["Nightlife", "Arts", "Sports", "Dining", "Community", "Others"],
-    color: [false, false, false, false, false, false]
+    array: ["Nightlife", "Arts", "Sports", "Dining", "Community", "Other"],
+    color: [false, false, false, false, false, false],
+    counter: 0,
+    z: false
   },
 
   /**
@@ -108,7 +91,48 @@ Page({
     console.log(e.currentTarget.dataset.id)
     const id = e.currentTarget.dataset.id
     const a = this.data.color
-    a[id] ? a[id] = false : a[id] = true
-    this.setData({color: a})
+    if (this.data.counter < 3) {
+      if (a[id]) {
+        a[id] = false
+        this.data.counter--
+      } else {
+        a[id] = true
+        this.data.counter++
+      }
+      this.setData({color: a})
+    } else {
+      if (a[id] === true) {
+        a[id] = false
+        this.data.counter--
+      }
+      this.setData({color: a})
+      this.setData({z:true})
+    }
+  },
+  randomise: function(e) {
+    const date = this.data.todayDate
+    let arr = []
+    for (let i = 0; i<this.data.color.length; i++) {
+      if (this.data.color[i] === true) {
+        arr.push(this.data.array[i])
+      }
+    }
+    const data = {category_array: arr}
+    console.log(arr)
+    wx.request({
+      url: "https://funtimes.wogengapp.cn/api/v1/randomizer",
+      data: arr,
+      success: (res) => {
+        console.log(res)
+        app.globalData.randomArr = res.data.evints
+        console.log(res.data.evints)
+        wx.redirectTo({
+          url: '/pages/random/random',
+        })
+      }
+    })
+    console.log(arr);
   }
 })
+
+// ?category_array[]=${arr[0]}&category_array[]=${arr[1]}&category_array[]=${arr[2]}

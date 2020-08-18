@@ -16,12 +16,9 @@
           <view class="{{color[5]? 'very-class':''}}" data-id="5" bindtap="koo">{{array[5]}}</view>
         </view>
       </view>
-      <view id="style">
-        <view>Create Itinerary for:</view>
-        <picker mode="date" value="{{todayDate}}" name="date" start="{{todayDate}}" end="3000-01-01" bindchange="bindDateChange">{{todayDate}}</picker>
-      </view>
     </form>
-    <view id="bbb">Randomize</view>
+    <view id="alert" class="{{z?'':'hide'}}">Max. 3 categories can be selected.</view>
+    <view id="bbb" bindtap="randomise">Go!</view>
   </view>
 </view>
 

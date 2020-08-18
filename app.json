@@ -8,6 +8,7 @@
     "pages/wishlist/wishlist",
     "pages/anItinerary/anItinerary",
     "pages/itineraries/itineraries",
+    "pages/random/random",
     "pages/logs/logs"
 
   ],

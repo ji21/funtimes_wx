@@ -41,7 +41,7 @@ image {
   z-index: 6;
   background-color: white;
   width: 545rpx;
-  height: 273px;  
+  padding-bottom: 22rpx;
 }
 
 .pop {
@@ -128,7 +128,7 @@ image {
   text-align: center;
   font-size: 35rpx;
   padding: 10rpx;
-  margin-top: 50rpx;
+  margin-top: 29rpx;
   border-radius: 40rpx;
   background-color: #3BE2AB;
   color: white;
@@ -137,4 +137,16 @@ image {
 .very-class {
   background-color: #3BE2AB;
   color: white;
+}
+
+#alert {
+  color: red;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 25rpx;
+  text-align: center;  
+}
+
+.hide {
+  display: none;
 }
