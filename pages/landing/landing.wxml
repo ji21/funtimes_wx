@@ -1,3 +1,4 @@
+<cover-image mode="widthFit" src="../../images/shanghai.png" width="100" />
 <view class="search-bar">
    <image mode="aspectFit" src="../../images/tabbar/search.png" />
    <view id="space"></view>
