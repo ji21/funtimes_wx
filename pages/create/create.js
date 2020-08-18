@@ -1,11 +1,35 @@
 // pages/create/create.js
+const app = getApp();
+const host = app.globalData.host
+const globalWishlist = app.globalData.wishlist
+var today = new Date();
+
+var dd = today.getDate();
+var mm = today.getMonth()+1;
+var yyyy = today.getFullYear();
+if(dd<10)
+{
+    dd='0'+dd;
+}
+
+if(mm<10)
+{
+    mm='0'+mm;
+}
+today = yyyy+'-'+mm+'-'+dd;
+
+
+
 Page({
 
   /**
    * Page initial data
    */
   data: {
-    hide: true
+    hide: true,
+    todayDate: today,
+    array: ["Nightlife", "Arts", "Sports", "Dining", "Community", "Others"],
+    color: [false, false, false, false, false, false]
   },
 
   /**
@@ -73,6 +97,18 @@ Page({
   },
   show: function() {
     this.setData({hide: false})
+  },
+  bindDateChange: function(e) {
+    this.setData({
+      todayDate: e.detail.value
+    })
+    console.log(this.data.todayDate)
+  },
+  koo: function(e) {
+    console.log(e.currentTarget.dataset.id)
+    const id = e.currentTarget.dataset.id
+    const a = this.data.color
+    a[id] ? a[id] = false : a[id] = true
+    this.setData({color: a})
   }
-
 })

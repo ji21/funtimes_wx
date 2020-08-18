@@ -16,7 +16,7 @@ Page({
    */
   onLoad: function (options) {
     wx.request({
-      url: 'https://funtimes.wogengapp.cn/api/v1/evints',
+      url: host + 'evints',
       success: (res) => {
         console.log(res.data);
         this.setData({events: res.data})

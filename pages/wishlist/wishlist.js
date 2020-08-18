@@ -16,7 +16,7 @@ Page({
   onLoad: function (options) {
     this.setData({check: app.globalData.wishlist})
     wx.request({
-      url: 'https://funtimes.wogengapp.cn/api/v1/evints',
+      url: app.getHost() + 'evints',
       success: async (res) => {
         console.log(res.data);
         this.setData({events: res.data})

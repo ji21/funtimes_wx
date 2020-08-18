@@ -81,7 +81,7 @@ picker {
   width: 393rpx;
   border-radius: 4rpx;
   box-sizing: border-box;
-  padding-left: 19rpx;
+  padding-left: 80rpx;
   padding-top: 36rpx;
   padding-right: 124rpx;
   color: rgb(148, 145, 145);

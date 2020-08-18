@@ -1,4 +1,5 @@
 // pages/show/show.js
+const app = getApp()
 
 Page({
 
@@ -18,7 +19,7 @@ Page({
       console.log('id in show', id)
 
       wx.request ({
-         url: `https://funtimes.wogengapp.cn/api/v1/evints/${id}`,
+         url: `${app.getHost()}evints/${id}`,
          success: (res) => {
             page.setData(res.data)
             console.log(res)

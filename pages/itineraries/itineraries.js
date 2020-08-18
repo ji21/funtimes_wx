@@ -98,7 +98,7 @@ Page({
     console.log(e.currentTarget.dataset.id)
     const id = e.currentTarget.dataset.id
     wx.request({
-      url: `https://funtimes.wogengapp.cn/api/v1/itineraries/${id}`,
+      url: `${host}itineraries/${id}`,
       method: "DELETE",
       success: () => {
         wx.reLaunch({

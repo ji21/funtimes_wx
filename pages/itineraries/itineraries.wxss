@@ -115,6 +115,8 @@
    height: 88%;
    position: aboslute;
    align-items: unset !important;
+   width: 421rpx;
+   flex-grow: 0;
  }
 
  .profile-top {
