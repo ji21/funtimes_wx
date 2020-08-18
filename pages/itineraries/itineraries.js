@@ -85,14 +85,16 @@ Page({
    * Called when page reach bottom
    */
   onReachBottom: function () {
-
   },
 
   /**
    * Called when user click on the top right corner to share
    */
-  onShareAppMessage: function () {
 
+
+
+
+  onShareAppMessage: function () {
   },
   deleteIt: function (e) {
     console.log(e.currentTarget.dataset.id)

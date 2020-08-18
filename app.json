@@ -8,7 +8,8 @@
     "pages/wishlist/wishlist",
     "pages/anItinerary/anItinerary",
     "pages/itineraries/itineraries",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/itinerary/itinerary"
 
   ],
   "window":{
@@ -17,6 +18,13 @@
     "navigationBarTitleText": "FunMapped",
     "navigationBarTextStyle":"black"
   },
+
+    "permission": {
+      "scope.userLocation": {
+        "desc": "Please provide your location so we can map out your journey"
+      }
+    },
+  
   "tabBar": {
     "color": "#000000",
     "selectedColor": "#1EDD88",
