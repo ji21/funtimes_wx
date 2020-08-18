@@ -16,7 +16,10 @@
                 </view>
               </view>
             </view>
-            <view class="abcde"><button class="btn" open-type="share" bindtap="onShareAppMessage">Share</button></view>
+            <view class="abcde">
+              <button class="btn2" bindtap="deleteIt" data-id="{{it.id}}">Remove</button>
+              <button class="btn1" open-type="share" bindtap="onShareAppMessage">Share</button>
+            </view>
           </view>
       </view>
     <view style="height: 100rpx"></view>

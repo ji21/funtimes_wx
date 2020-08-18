@@ -93,5 +93,19 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  deleteIt: function (e) {
+    console.log(e.currentTarget.dataset.id)
+    const id = e.currentTarget.dataset.id
+    wx.request({
+      url: `https://funtimes.wogengapp.cn/api/v1/itineraries/${id}`,
+      method: "DELETE",
+      success: () => {
+        wx.reLaunch({
+          url: '/pages/itineraries/itineraries',
+          success: (res) => {console.log(1)}
+        })
+      }
+    })
   }
 })
