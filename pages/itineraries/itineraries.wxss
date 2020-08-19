@@ -96,7 +96,7 @@
     width: 42%;
     border-radius: 10rpx;
     border-radius: 18rpx;
-    margin-left: 5rpx;
+    margin-left: 19rpx;
    margin-right: 25rpx;
  }
 

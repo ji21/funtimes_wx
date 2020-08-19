@@ -11,40 +11,6 @@ Page({
       lt: "31.232065",
       lg: "121.470645",
       sc: '11',
-      mk: [
-         {
-           iconPath: "../../images/marker/marker.png", // **1
-           id: 0,
-           latitude: 31.219614,
-           longitude: 121.443877,
-           width: 40,
-           height: 40
-         },
-         {
-            iconPath: "../../images/marker/marker2.png", // **1
-            id: 0,
-            latitude: 31.919614,
-            longitude: 120.443877,
-            width: 40,
-            height: 40
-          },
-          {
-            iconPath: "../../images/marker/marker3.png", // **1
-            id: 0,
-            latitude: 30.919614,
-            longitude: 120.943877,
-            width: 40,
-            height: 40
-          },
-          {
-            iconPath: "../../images/marker/marker4.png", // **1
-            id: 0,
-            latitude: 29.919614,
-            longitude: 120.943877,
-            width: 40,
-            height: 40
-          }
-       ],
 
    },
 
@@ -84,23 +50,29 @@ Page({
    const itinerary={}
    //to Interpolate in wx.request ==> ${getApp().globalData.userId}
    //updated on 18 august
+   const id = options.id
    wx.request({
-      url: host + `itineraries/?user_id=2`,
+      url: host + `itineraries/${id}`,
       success: (res) => {
-      console.log("--------------",res)
-      const itinerary= res.data[0]
-      console.log("this is the itinerary",itinerary)
-      this.setData({itinerary: itinerary})
+      console.log("--------------",res.data)
+      const name = res.data.name
+      const activites = res.data.activities
+      const date = res.data.date
+      console.log("activites--->", activites)
+      this.setData({name: name, evints: activites, date: date})
+   //    const itinerary= res.data[0]
+   //    console.log("this is the itinerary",itinerary)
+   //    this.setData({itinerary: itinerary})
 
-      const act = itinerary.activities
-     // page.setData({itineraries: res.data})
-     console.log("these are itinerary activities", act)
-     const mk = act.map((a=> this.getMarker(a.activity_id, a.lat, a.lng)))
+   //    const act = itinerary.activities
+   //   // page.setData({itineraries: res.data})
+   //   console.log("these are itinerary activities", act)
+     const mk = activites.map((a=> this.getMarker(a.activity_id, a.lat, a.lng)))
      console.log('markers', mk)
      this.setData({ mk })
-     console.log(act[0].title)
-     this.setData({evint: act})
-      console.log("checking wats in evint",evint)
+   //   console.log(act[0].title)
+   //   this.setData({evint: act})
+   //    console.log("checking wats in evint",evint)
 
 
 

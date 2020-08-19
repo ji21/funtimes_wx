@@ -109,5 +109,12 @@ Page({
         })
       }
     })
+  },
+  goToItinerary: function(e) {
+    console.log(e.currentTarget.dataset)
+    const id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: `/pages/itinerary/itinerary?id=${id}`,
+    })
   }
 })

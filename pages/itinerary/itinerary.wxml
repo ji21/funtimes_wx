@@ -1,24 +1,28 @@
 <!--pages/itinerary/itinerary.wxml-->
 <view class = "container">
-   <view class = "title black bold flex column-center justify-center f36"> {{itinerary.name}}</view>
-
    <view class="map radius20">
       <map longitude="{{lg}}" latitude="{{lt}}" scale="{{sc}}" style="width: 100%; height: 44vh;" markers="{{mk}}"></map>
+      <view id="urgent" stlye="font-size: 40rpx">My <view style="text-shadow: 3rpx 3rpx 1rpx #3BE2AB"> {{name}} </view> Activities...</view>
    </view>
-
-   <view class="events-div radius10">
-   <text class="ml20 bold">List of Activities</text>
-
-      <view class="one-event flex row" wx:for="{{evint}}" wx:for-item="evint" data-id="{{evint.id}}">
-            <view class="foto radius10"><image mode="aspectFill" class="image2 w100 h100 radius10 "  src="{{evint.image ? evint.image : '/images/funmapped logo.png'}}"/></view>
-            <view class="details flex column justify-around">
-                     <text class="bold">{{evint.title}} </text>
-                     <text class="detail-text">at {{evint.time}} on {{evint.date}}</text>
-                     <text class="detail-text">Address: {{evint.address}} </text>                     
-            </view>
+   <view style="height: 700rpx"></view>
+      <view class="wrapper" wx:for="{{evints}}" wx:for-item="event" data-id="{{event.activity_id}}" bindtap="outOfIdeas">
+         <view class="a-event-card" data-id="{{event.activity_id}}">
+         <image src="{{event.image ? event.image : '/images/funmapped logo.png'}}"/>
+         <view class="info">
+            <view id="event-name">{{event.title}}</view>
+         <view class="div">
+            <view class="category">{{event.category}}</view>
+         </view>
+         <view class="div">
+            <view id="time">...{{event.time}}, {{event.date}}</view>
+         </view>
+         <view class="div">
+            <view class="address">...at {{event.venue}}</view>
+         </view>
+         </view>
       </view>
+    </view>
 
-   </view>
 
    <view class= "share-button flex column-center">
             <button class="btn radius10" open-type="share" bindtap="onShareAppMessage">Share</button>
