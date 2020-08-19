@@ -7,7 +7,8 @@ Page({
    * Page initial data
    */
   data: {
-    hide: true
+    hide: true,
+    iii: true
   },
 
   /**
@@ -15,16 +16,26 @@ Page({
    */
   onLoad: function (options) {
     this.setData({check: app.globalData.wishlist})
-    wx.request({
-      url: app.getHost() + 'evints',
-      success: async (res) => {
-        console.log(res.data);
-        this.setData({events: res.data})
-        // for (x of this.events) {
-        //   globalWishlist[x.id] = false;
-        // }
+    let a = false
+    for (let x in this.data.check) {
+      if (this.data.check[x] === true) {
+        a = true
+        break
       }
-    })
+    }
+    // console.log("---------", this.data.check)
+    // console.log("aaaa", a)
+    if (a) {
+      wx.request({
+        url: app.getHost() + 'evints',
+        success: async (res) => {
+          console.log(res.data);
+          this.setData({events: res.data})
+        }
+      })
+    } else {
+      this.setData({iii: false})
+    }
   },
 
   /**

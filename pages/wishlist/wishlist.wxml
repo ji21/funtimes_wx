@@ -3,7 +3,7 @@
 </view>
 
 <view style="height: 180rpx"></view>
-
+<view class="{{iii? 'hide': ''}} msg">Oops! Your wishlist is empty!</view> 
 <view class="container">
       <view class="wrapper {{selectList[event.id]? 'green-border':''}}" wx:for="{{events}}" wx:for-item="event" wx:if="{{check[event.id]}}" data-id="{{event.id}}" bindtap="goToShow">
             <view class="a-event-card" data-id="{{event.id}}">

@@ -47,19 +47,20 @@
 }
 
 .btn2 {
-   text-align:center;
-   border-radius:8rpx;
-   height: 50rpx;
-   width: 50%!important;
-   background-color: #3BE2AB;
+   text-align: center;
+   height: 39rpx;
+   width: 46%!important;
    color: white;
    font-weight: 500;
    margin-left: 0rpx!important;
-   margin-right: 0rpx!important;
-   padding-bottom: 58rpx!important;
-   padding-right: 20rpx!important;
+   margin-right: 15rpx!important;
+   padding-bottom: 46rpx!important;
+   padding-right: 13rpx!important;
    background-color: #f5584d;
-   padding-left: 20rpx!important;
+   padding-left: 14rpx!important;
+   padding-top: 7rpx;
+   border-radius: 20rpx;
+   font-size: 26rpx;
 }
 
 .title {
@@ -74,9 +75,6 @@
    font-size: 20rpx;
  }
 
- divy {
-
- }
 
  .it-container {
     position: absolute;
@@ -88,7 +86,7 @@
     bottom: 5rpx;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
  }
 
  .xyz {
@@ -134,4 +132,15 @@
    top: 74rpx;
    left: 265rpx;
    font-size: 35rpx;    
+}
+
+.hide {
+   display: none;
+}
+
+.msg{
+   width: 100%;
+   text-align: center;
+   height: 120rpx;
+   padding-top: 80rpx
 }

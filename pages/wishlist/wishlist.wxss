@@ -33,3 +33,14 @@
    left: 265rpx;
    font-size: 35rpx;    
 }
+
+.hide {
+   display: none;
+}
+
+.msg{
+   width: 100%;
+   text-align: center;
+   height: 120rpx;
+   padding-top: 80rpx
+}

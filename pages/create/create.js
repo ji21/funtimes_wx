@@ -20,7 +20,6 @@ Page({
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
-
   },
 
   /**
@@ -112,6 +111,7 @@ Page({
     }
   },
   randomise: function(e) {
+    
     this.data.counter === 0 ? this.setData({y: true}) : this.setData({y: false})
     if (this.data.y) {
       return 0
@@ -142,6 +142,8 @@ Page({
         })
       }
     })
+    this.setData({array: ["Arts", "Community", "Sports", "Dining", "Nightlife", "Other"],
+    color: [false, false, false, false, false, false]})
   }
 })
 

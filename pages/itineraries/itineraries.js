@@ -7,7 +7,7 @@ Page({
    * Page initial data
    */
   data: {
-
+    iii: true
   },
 
   /**
@@ -21,7 +21,8 @@ Page({
       wx.request({
         url: host + `itineraries/?user_id=${id}`,
         success: (res) => {
-          console.log(res.data[0].activities[0])
+          console.log(res.data[0])
+          if (res.data[0] === undefined) page.setData({iii: false})
           page.setData({itineraries: res.data})
         }
       }) 
@@ -91,11 +92,6 @@ Page({
    * Called when user click on the top right corner to share
    */
 
-
-
-
-  onShareAppMessage: function () {
-  },
   deleteIt: function (e) {
     console.log(e.currentTarget.dataset.id)
     const id = e.currentTarget.dataset.id

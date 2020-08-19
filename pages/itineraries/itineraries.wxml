@@ -3,7 +3,8 @@
 </view>
 
 <view class="container"> 
-      <view style="height: 188rpx"></view>  
+      <view style="height: 188rpx"></view> 
+      <view class="{{iii? 'hide': ''}} msg">Oops! You have no Itineraries</view> 
       <view class="it-container">
       <view class="card-it" data-id="{{it.id}}" wx:for="{{itineraries}}" bindtap ="goToItinerary" wx:for-item="it">
           <image class="xyz noshrink" src="{{it.activities[0].image ? it.activities[0].image : '/images/funmapped logo.png' }}"/>
@@ -18,7 +19,7 @@
             </view>
             <view class="abcde">
               <button class="btn2" bindtap="deleteIt" data-id="{{it.id}}">Remove</button>
-              <button class="btn1" open-type="share" bindtap="onShareAppMessage">Share</button>
+
             </view>
           </view>
       </view>
