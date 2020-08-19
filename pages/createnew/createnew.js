@@ -40,6 +40,7 @@ Page({
         success: async (res) => {
           console.log(res.data);
           this.setData({events: res.data})
+          console.log("checking what s in this",this)
           // for (x of this.events) {
           //   globalWishlist[x.id] = false;
           // }

@@ -5,7 +5,7 @@
 <view class="container"> 
       <view style="height: 188rpx"></view>  
       <view class="it-container">
-      <view class="card-it" data-id="{{itinerary.id}}" wx:for="{{itineraries}}" wx:for-item="it">
+      <view class="card-it" data-id="{{itinerary.id}}" wx:for="{{itineraries}}" bindtap ="goToItinerary" wx:for-item="it">
           <image class="xyz noshrink" src="{{it.activities[0].image ? it.activities[0].image : '/images/funmapped logo.png' }}"/>
           <view class="info-it column-between grow">
             <view>
