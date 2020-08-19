@@ -2,9 +2,9 @@
   <button class="log-in {{logIn? 'hide': ''}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">Log in/登入</button>
   <view class="hider {{logIn? '':'hide'}}">
     <view class="user-info">
-      <image src=""/>
+      <image src="{{logIn.avatar}}"/>
       <view class="user-info-text">
-        <view class="nick-name">Jeffrey</view>
+        <view class="nick-name">{{logIn.name}}</view>
       </view>
     </view>
   </view>

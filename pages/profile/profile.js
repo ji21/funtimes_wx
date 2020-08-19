@@ -15,13 +15,9 @@ Page({
    */
   onLoad: function (options) {
     wx.request({
-      url: 'https://funtimes.wogengapp.cn/api/v1/evints',
-      success: async (res) => {
-        console.log(res.data);
-        this.setData({events: res.data})
-        // for (x of this.events) {
-        //   globalWishlist[x.id] = false;
-        // }
+      url: 'url',
+      succes: () => {
+
       }
     })
   },
@@ -85,10 +81,30 @@ Page({
     })
   },
   getUserInfo: function(e) {
+    const page = this
     console.log(e.detail.rawData)
+    const dede = e.detail.rawData.split(/(\".*?\")/gm)
+    const name = dede[3].slice(1, dede[3].length-1)
+    const avatar = dede[25].slice(1, dede[25].length - 1)
+    const blah = {name: name, avatar: avatar}
+    const id = app.globalData.userId
+    console.log(blah)
+    wx.request({
+      url: `https://funtimes.wogengapp.cn/api/v1/update_user/${id}`,
+      method: "PUT",
+      data: blah,
+      success: () => {
+        page.setData({logIn: blah})
+        app.globalData.userInfo = blah
+      }
+    })
     this.setData({logIn: true})
   },
   logOut: function() {
     this.setData({logIn: false})
+    app.globalData.userInfo = null
+    wx.reLaunch({
+      url: '/pages/profile/profile',
+    })
   }
 })

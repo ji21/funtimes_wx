@@ -8,9 +8,13 @@
    position: absolute;
    bottom: 20rpx;
    right: 22rpx;
-   font-weight: 400rpx;
+   font-weight: 400;
    background-color: rgb(253, 83, 83);
    color: white;
+   padding: 8rpx;
+   padding-left: 20rpx!important;
+   padding-right: 20rpx!important;
+   width: 179rpx;   
 }
 
 .profile-top {

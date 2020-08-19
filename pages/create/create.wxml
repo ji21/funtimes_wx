@@ -1,18 +1,35 @@
 <!--pages/create/create.wxml-->
-<view class="pop {{hide? 'hide': ''}}" catchtap="rehide">
+<view class="pop {{hide? 'hide': ''}}">
+  <view class="h100 w100 bg-black opacity3" catchtap="rehide"></view>
   <view class="pop-up {{hide? 'hide': ''}}">
-    <view class="pop1"></view>
+    <view class="h">Choose your Preferences</view>
+    <form id="iii">
+      <view id="ccc">
+        <view class="top">
+          <view class="{{color[0]? 'very-class':''}}" data-id="0" bindtap="koo">{{array[0]}}</view>
+          <view class="{{color[1]? 'very-class':''}}" data-id="1" bindtap="koo">{{array[1]}}</view>
+          <view class="{{color[2]? 'very-class':''}}" data-id="2" bindtap="koo">{{array[2]}}</view>
+        </view>
+        <view class="bot">
+          <view class="{{color[3]? 'very-class':''}}" data-id="3" bindtap="koo">{{array[3]}}</view>
+          <view class="{{color[4]? 'very-class':''}}" data-id="4" bindtap="koo">{{array[4]}}</view>
+          <view class="{{color[5]? 'very-class':''}}" data-id="5" bindtap="koo">{{array[5]}}</view>
+        </view>
+      </view>
+    </form>
+    <view id="alert" class="{{z?'':'hide'}}">Max. 3 categories can be selected.</view>
+    <view id="bbb" bindtap="randomise">Go!</view>
   </view>
 </view>
 
 <view class="container">
   <button bindtap="goToCreateNew"> 
-    <image src="../../images/create/strategic-plan.png" />
+    <image src="../../images/create/strategic-plan.png" mode="aspectFit"/>
     <view class="text">Plan and Share an Itinerary</view>
   </button>
 
   <button bindtap="show"> 
-    <image src="../../images/create/wheel.png" />
+    <image src="../../images/create/wheel.png" mode="aspectFit"/>
     <view class="text">Generate a randomised itinerary</view>
   </button>
 </view>
