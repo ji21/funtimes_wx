@@ -12,7 +12,8 @@ Page({
     array: ["Arts", "Community", "Sports", "Dining", "Nightlife", "Other"],
     color: [false, false, false, false, false, false],
     counter: 0,
-    z: false
+    z: false,
+    y: false
   },
 
   /**
@@ -92,6 +93,7 @@ Page({
     const id = e.currentTarget.dataset.id
     const a = this.data.color
     if (this.data.counter < 3) {
+      this.setData({y: false})
       if (a[id]) {
         a[id] = false
         this.data.counter--
@@ -110,6 +112,10 @@ Page({
     }
   },
   randomise: function(e) {
+    this.data.counter === 0 ? this.setData({y: true}) : this.setData({y: false})
+    if (this.data.y) {
+      return 0
+    }
     const date = this.data.todayDate
     let arr = []
     for (let i = 0; i<this.data.color.length; i++) {
@@ -129,13 +135,13 @@ Page({
       success: (res) => {
         console.log(res.data)
         app.globalData.randomArr = res.data.evints
-        console.log(res.data.evints)
+        console.log("random events generated ---->", res.data.evints)
+        console.log("updated global random events array--------->", app.globalData.randomArr)
         wx.navigateTo({
           url: '/pages/random/random',
         })
       }
     })
-    console.log("updated", app.globalData.randomArr)
   }
 })
 

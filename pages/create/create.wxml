@@ -18,6 +18,7 @@
       </view>
     </form>
     <view id="alert" class="{{z?'':'hide'}}">Max. 3 categories can be selected.</view>
+    <view id="alert2" class="{{y?'':'hide'}}">Please select a category</view>
     <view id="bbb" bindtap="randomise">Go!</view>
   </view>
 </view>

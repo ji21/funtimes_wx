@@ -22,7 +22,7 @@
     <button bindtap="search" id="search" class="{{hide? '':'hide'}}">Search</button>
     <view class="wrapper {{selectList[event.id]? 'green-border':''}}" wx:for="{{events}}" wx:for-item="event" data-id="{{event.id}}" bindtap="outOfIdeas">
         <view class="a-event-card" data-id="{{event.id}}">
-          <image src="{{event.image_link ? event.image_link : '/images/funmapped logo.png'}}"/>
+          <image mode="aspectFill" src="{{event.image_link ? event.image_link : '/images/funmapped logo.png'}}"/>
           <view class="info">
             <view id="event-name">{{event.title}}</view>
             <view class="div">

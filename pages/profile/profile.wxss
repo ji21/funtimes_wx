@@ -15,7 +15,7 @@
    top: 68rpx;
    height: 90rpx;
    width: 286rpx;
-   left: 60rpx;
+   left: -17rpx;
    font-size: 38rpx;  
    background-color: #3BE2AB!important;
    margin: 0rpx!important;

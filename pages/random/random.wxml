@@ -1,2 +1,31 @@
-<!--pages/random/random.wxml-->
-<text>pages/random/random.wxml</text>
+<view class="profile-top"> 
+  <view id="it">Suggested Itinerary</view>
+</view>
+
+<view class="container">
+  <view style="height: 174rpx"></view>
+  <view class="title flex">
+    <view id="white-space"></view>
+    <input type="text" name="title" class="bg-white zzz" placeholder="Please name your itinerary..." bindinput="bbb"></input>
+  </view>
+    <view class="alert {{render?'':'hide'}}">Please enter a name</view>
+    <view class="wrapper" wx:for="{{events}}" wx:for-item="event" data-id="{{event.id}}" bindtap="goToShow">
+      <view class="a-event-card" data-id="{{event.id}}">
+        <image mode="aspectFill" src="{{event.image ? event.image : '/images/funmapped logo.png'}}"/>
+        <view class="info">
+          <view id="event-name">{{event.title}}</view>
+          <view class="div">
+            <view class="category">{{event.category}}</view>
+          </view>
+          <view class="div">
+            <view id="time">...{{event.period}}</view>
+          </view>
+          <view class="div">
+            <view class="address">...at {{event.venue}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <button class="create" bindtap="create">Create Itinerary</button>
+  <view style="height: 75rpx; width: 100%"></view>
+</view>
