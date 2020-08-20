@@ -140,6 +140,17 @@ Page({
       if (e.detail.value == "") {
         this.setData({hide: false})
         this.search(false)
+        wx.request({
+          url: host + 'evints',
+          success: async (res) => {
+            console.log(res.data);
+            this.setData({events: res.data})
+            console.log("checking what s in this",this)
+            // for (x of this.events) {
+            //   globalWishlist[x.id] = false;
+            // }
+          }
+        })
       }
     },
     bindDateChange: function(e) {
@@ -185,11 +196,12 @@ Page({
       })
    },
    search: function(a = true) {
+     const page = this
      console.log(this.data.input)
      let query1 = this.data.todayDate
      if (a===false) query1 = ""
      const query2 = this.data.input 
-     const q = {date: query1, query: query2}
+     const q = {query: query2}
      console.log("q->", q)
      wx.request({
        url: host + 'evints',
@@ -198,6 +210,7 @@ Page({
        success: (res) => {
         console.log(res.data);
         this.setData({events: res.data})
+        console.log(page.data.events)
        }
      })
    }

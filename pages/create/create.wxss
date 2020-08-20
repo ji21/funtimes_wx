@@ -131,12 +131,10 @@ image {
   margin-top: 29rpx;
   border-radius: 40rpx;
   background-color: #3BE2AB;
-  color: white;
 }
 
 .very-class {
   background-color: #3BE2AB;
-  color: white;
 }
 
 #alert {

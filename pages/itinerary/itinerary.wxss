@@ -52,7 +52,7 @@ padding-bottom: 10rpx;
    padding-right: 40rpx;
    border-radius:15rpx;
    background-color: #3BE2AB;
-   color: var(--white);
+   color: black;
    margin-top: 80rpx;
    margin-bottom: 80rpx;
    margin-top: 5rpx;
@@ -112,4 +112,8 @@ margin-right: 20rpx;
    padding-left: 28rpx;
    background-color: white;
    display: flex;
+}
+
+.share-button {
+   color: black;
 }

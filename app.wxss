@@ -21,7 +21,7 @@ page {
   text-align: center;
   position: fixed;
   top: 33rpx;
-  color: white;
+  color: black;
   left: 204rpx;
   font-weight: bold;
   background-color:#BFE8FF;
@@ -107,8 +107,7 @@ page {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  color: white;
-  text-shadow: 3rpx 0rpx 0rpx rgb(105, 102, 102);
+  color: black;
 }
 
 #time {

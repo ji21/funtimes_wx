@@ -13,6 +13,7 @@
             <image mode="{{event.image_link? 'aspectFill' : ''}}" class="w100 radius10" bindtap="goToShow" data-id="{{event.id}}" src="{{event.image_link? event.image_link: '/images/funmapped logo.png'}}"/>
          <!-- </view> -->
             <text class="title1">{{event.title}}</text>
+            <view class="absolute a z1 bii" style="background-image: linear-gradient(transparent 0%, transparent 60%, black 100%)"></view>
       </view>
       <view id="line"></view>
 </view>

@@ -127,7 +127,7 @@
 }
 
 #it {
-   color: white;
+   color: black;
    position: fixed;
    top: 74rpx;
    left: 265rpx;
