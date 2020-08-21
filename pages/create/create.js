@@ -148,11 +148,10 @@ Page({
     for (let i = 0; i<arr.length; i++) {
       s+= `category_array[]=${arr[i]}&`
     }
-    s = s.slice(0, s.length-1)
-    console.log(s)
+    let stringDate = this.data.todayDate
+    console.log("-----------------------s", `${s}date=${stringDate}`)
     wx.request({
-      url: host + `randomizer?${s}`,
-      data: {date: page.data.todayDate},
+      url: host + `randomizer?${s}date=${stringDate}`,
       success: (res) => {
         console.log(res.data)
         app.globalData.randomArr = res.data.evints
