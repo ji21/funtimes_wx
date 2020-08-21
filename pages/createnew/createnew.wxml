@@ -5,7 +5,7 @@
     <input type="text" name="search" placeholder="Search" class="search-text" bindinput="hideForm"></input>
   </view>
     <form bindsubmit="goToItinerary" class="{{hide? 'hide':''}}">
-        <view id="title">Create New Itinerary</view>
+        <view id="title">Create new itinerary</view>
         <view class="title flex">
           <view id="white-space"></view>
           <input type="text" name="title" class="bg-white" placeholder="Itinerary Name" bindinput="be"></input>
@@ -13,7 +13,7 @@
 
         <view id="white-space"></view>
         <view class="picker-div">
-          <view>Create Itinerary for:</view>
+          <view>Create itinerary for:</view>
           <picker mode="date" value="{{todayDate}}" name="date" start="{{todayDate}}" end="3000-01-01" bindchange="bindDateChange">{{todayDate}}</picker>
         </view>
         <button form-type="submit" class="create">Create</button>

@@ -10,7 +10,7 @@
           <image class="xyz noshrink" src="{{it.activities[0].image ? it.activities[0].image : '/images/funmapped logo.png' }}"/>
           <view class="info-it column-between grow">
             <view>
-              <view id="itinerary-name">{{it.name}}</view>
+              <view id="itinerary-name" >{{it.name}}</view>
               <view class="divy">
                 <view class="a" wx:for="{{it.activities}}" wx:for-item="act">
                   <view class="title">{{act.title}}</view>
