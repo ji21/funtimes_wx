@@ -2,8 +2,10 @@
   <view id="it">Suggested Itinerary</view>
 </view>
 
-<view class="container">
-  <view style="height: 174rpx"></view>
+<view style="height: 174rpx"></view>
+<view class="{{events? 'hide': ''}} msg">Oops! No events on this day!</view> 
+
+<view class="container {{events? '':'hide'}}">
   <view class="title flex">
     <view id="white-space"></view>
     <input type="text" name="title" class="bg-white zzz" placeholder="Please name your itinerary..." bindinput="bbb"></input>

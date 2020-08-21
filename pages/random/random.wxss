@@ -102,6 +102,12 @@
   display: none;
 }
 
+.msg{
+  width: 100%;
+  text-align: center;
+  height: 120rpx;
+  padding-top: 80rpx
+}
 
 .btn2 {
   text-align: center;

@@ -168,6 +168,21 @@ Page({
             // }
           }
         })
+      } else {
+        let query1 = this.data.todayDate
+        const query2 = this.data.input 
+        const q = {query: query2, date: this.data.todayDate}
+        console.log("q->", q)
+        wx.request({
+          url: host + 'evints',
+          method: "GET",
+         data: q,
+          success: (res) => {
+           console.log(res.data);
+           this.setData({events: res.data})
+           console.log(page.data.events)
+          }
+        })
       }
     },
     bindDateChange: function(e) {
@@ -239,7 +254,7 @@ Page({
      let query1 = this.data.todayDate
      if (a===false) query1 = ""
      const query2 = this.data.input 
-     const q = {query: query2}
+     const q = {query: query2, date: this.data.todayDate}
      console.log("q->", q)
      wx.request({
        url: host + 'evints',

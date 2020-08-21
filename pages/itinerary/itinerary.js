@@ -115,25 +115,15 @@ Page({
     */
    onReachBottom: function () {
    },
-
    /**
     * Called when user click on the top right corner to share
     */
    onShareAppMessage: function () {
    }, 
-
    test: function() {
       console.log(6)
       const page = this
       console.log(page)
       console.log("this is the data", app)
    }
-
-
-
-
-
-
-
-
 })
