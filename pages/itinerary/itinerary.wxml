@@ -7,7 +7,7 @@
    <view style="height: 700rpx"></view>
       <view class="wrapper" wx:for="{{evints}}" wx:for-item="event" data-id="{{event.activity_id}}" bindtap="outOfIdeas">
          <view class="a-event-card" data-id="{{event.activity_id}}">
-         <image src="{{event.image ? event.image : '/images/funmapped logo.png'}}"/>
+         <image mode="aspectFit" src="{{event.image ? event.image : '/images/funmapped logo.png'}}"/>
          <view class="info">
             <view id="event-name">{{event.title}}</view>
          <view class="div">

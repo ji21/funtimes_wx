@@ -48,8 +48,8 @@ App({
   },
   globalData: {
     userInfo: null,
-    // host: "https://funtimes.wogengapp.cn/api/v1/",
-    host: "http://localhost:3000/api/v1/",
+    host: "https://funtimes.wogengapp.cn/api/v1/",
+    // host: "http://localhost:3000/api/v1/",
     wishlist: {}
   },
 
