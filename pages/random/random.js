@@ -9,7 +9,7 @@ Page({
    */
   data: {
     hide: false,
-    events: app.globalData.randomArr
+    events: app.globalData.randomArr,
   },
 
   /**

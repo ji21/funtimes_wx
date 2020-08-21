@@ -18,7 +18,7 @@
               </view>
             </view>
             <view class="abcde">
-              <button class="btn2" bindtap="deleteIt" data-id="{{it.id}}">Remove</button>
+              <button class="btn2" catchtap="deleteIt" data-id="{{it.id}}">Remove</button>
             </view>
           </view>
       </view>

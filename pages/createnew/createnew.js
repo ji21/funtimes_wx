@@ -28,7 +28,9 @@ Page({
       todayDate: today,
       wishlist: globalWishlist,
       selectList: {},
-      hideList: {}
+      hideList: {},
+      render: false,
+      ra: false
    },
 
    /**
@@ -99,50 +101,65 @@ Page({
 
    goToItinerary: function(e) {
       const name = e.detail.value.title
-      const date = e.detail.value.date
-      let list = []
-      const selected = this.data.selectList
-      for (let prop in selected) {
-        if (selected[prop] === true) {
-          list.push(prop)
-          console.log(prop)
+      console.log("length.........", Object.keys(this.data.selectList).length)
+      let checker = false
+      for (let prop in this.data.selectList) {
+        if (this.data.selectList[prop] === true) {
+          checker = true
         }
       }
-      const id = app.globalData.userId
-      const itinerary = {
-        date: date,
-        name: name,
-        user_id: id
-      }
-      const a = {
-        itinerary,
-        evint_array: list
-      }
-      console.log("this is a -------------------------", a)
-      // console.log(id)
-      // console.log(e.detail.value)
-      // console.log(list[1])
-      wx.request({
-        url: host + 'itineraries',
-        method: "POST",
-        data: a,
-        success: () => {
-          wx.redirectTo({
-            url: '/pages/itineraries/itineraries',
-          })
+      if (name !== "" && checker) {
+        const date = e.detail.value.date
+        let list = []
+        const selected = this.data.selectList
+        for (let prop in selected) {
+          if (selected[prop] === true) {
+            list.push(prop)
+            console.log(prop)
+          }
         }
-      })
+        const id = app.globalData.userId
+        const itinerary = {
+          date: date,
+          name: name,
+          user_id: id
+        }
+        const a = {
+          itinerary,
+          evint_array: list
+        }
+        console.log("this is a -------------------------", a)
+        // console.log(id)
+        // console.log(e.detail.value)
+        // console.log(list[1])
+        wx.request({
+          url: host + 'itineraries',
+          method: "POST",
+          data: a,
+          success: () => {
+            wx.redirectTo({
+              url: '/pages/itineraries/itineraries',
+            })
+          }
+        })
+      } else if (!checker) {
+        this.setData({ra: true})
+      } else {
+        this.setData({render: true})
+      }
     },
     hideForm: function(e) {
+      const page = this
       console.log(e)
       // console.log(e.detail.value);
       this.setData({hide: true, input: e.detail.value})
-      if (e.detail.value == "") {
+      if (e.detail.value === "") {
         this.setData({hide: false})
         this.search(false)
         wx.request({
           url: host + 'evints',
-          success: async (res) => {
+          data: {query: "", date: page.data.todayDate},
+          success: (res) => {
             console.log(res.data);
             this.setData({events: res.data})
             console.log("checking what s in this",this)
@@ -154,10 +171,23 @@ Page({
       }
     },
     bindDateChange: function(e) {
+      const page = this
       this.setData({
         todayDate: e.detail.value
       })
       console.log(this.data.todayDate)
+      const q = {query: "", date: this.data.todayDate}
+      wx.request({
+        url: host + 'evints',
+        method: "GET",
+       data: q,
+        success: (res) => {
+         console.log(res.data);
+         this.setData({events: res.data})
+         console.log(page.data.events)
+        }
+      })
+
     },
     save: function(e) {
       const id = e.currentTarget.dataset.id
@@ -167,11 +197,19 @@ Page({
       console.log(this.data.wishlist)
     },
     select: function(e) {
-      e.stop
+      let checker = false
       const id = e.currentTarget.dataset.id
       const select = this.data.selectList
       select[id] ? select[id] = false : select[id] = true
       this.setData({selectList: select })
+      for (let prop in this.data.selectList) {
+        console.log("prop-----", prop)
+        if (this.data.selectList[prop] === true) {
+          checker = true
+        }
+      }
+      if (checker) this.setData({ra: false})
+      console.log(this.data.selectList)
       // console.log(this.data.selectList)
       // console.log(id)
       // console.log(this.data.selectList[id])
@@ -213,5 +251,11 @@ Page({
         console.log(page.data.events)
        }
      })
+   },
+   be: function(e) {
+     console.log(e.detail.value)
+     if (e.detail.value !== "") {
+       this.setData({render: false})
+     }
    }
 })

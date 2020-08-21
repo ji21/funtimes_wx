@@ -8,7 +8,7 @@
         <view id="title">Create New Itinerary</view>
         <view class="title flex">
           <view id="white-space"></view>
-          <input type="text" name="title" class="bg-white" placeholder="Itinerary Name"></input>
+          <input type="text" name="title" class="bg-white" placeholder="Itinerary Name" bindinput="be"></input>
         </view>
 
         <view id="white-space"></view>
@@ -18,6 +18,8 @@
         </view>
         <button form-type="submit" class="create">Create</button>
     </form>
+    <view class="alert {{render? '' :'hide'}}">Please enter a name</view>
+    <view class="alert {{ra? '' :'hide'}}">Please select an event</view>
      <!-- {{events[index]}} -->
     <button bindtap="search" id="search" class="{{hide? '':'hide'}}">Search</button>
     <view class="wrapper {{selectList[event.id]? 'green-border':''}}" wx:for="{{events}}" wx:for-item="event" data-id="{{event.id}}" bindtap="outOfIdeas">

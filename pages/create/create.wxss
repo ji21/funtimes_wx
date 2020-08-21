@@ -37,11 +37,14 @@ image {
 .pop-up {
   position: fixed;
   top: 325rpx;
-  left: 108rpx;
+  left: 65rpx;
   z-index: 6;
   background-color: white;
-  width: 545rpx;
+  width: 591rpx;
   padding-bottom: 22rpx;
+  border-radius: 12rpx;
+  padding-right: 16rpx;
+  padding-left: 16rpx;  
 }
 
 .pop {
@@ -112,14 +115,32 @@ image {
 
 .top view {
   border: 1px solid #3BE2AB;
-  padding: 3rpx 15rpx;
+  padding: 11rpx 24rpx;
   border-radius: 32rpx;
 }
 
 .bot view {
   border: 1px solid #3BE2AB;
-  padding: 3rpx 15rpx;
+  padding: 11rpx 24rpx;
   border-radius: 32rpx;
+}
+
+#the-one{
+  padding-left: 30rpx;
+  text-align: center;  
+}
+
+.iam {
+  width: 244rpx;
+  text-align: left;
+}
+
+.picker-div {
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  margin-top: 24rpx;
+  justify-content: space-between;
 }
 
 #bbb {

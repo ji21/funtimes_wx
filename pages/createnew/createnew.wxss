@@ -150,6 +150,13 @@ picker {
   font-weight: 400;
 }
 
+.alert {
+  color: red;
+  width: 90%;
+  margin: 0 auto;
+  margin-bottom: 20rpx;
+}
+
 .red {
   color: white!important;
   background-color: #f5584d!important;

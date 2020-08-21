@@ -2,12 +2,31 @@
 const app = getApp();
 const host = app.globalData.host
 const globalWishlist = app.globalData.wishlist
+
+var today = new Date();
+
+var dd = today.getDate();
+var mm = today.getMonth()+1;
+var yyyy = today.getFullYear();
+if(dd<10)
+{
+    dd='0'+dd;
+}
+
+if(mm<10)
+{
+    mm='0'+mm;
+}
+today = yyyy+'-'+mm+'-'+dd;
+
+
 Page({
 
   /**
    * Page initial data
    */
   data: {
+    todayDate: today,
     hide: true,
     array: ["Arts", "Community", "Sports", "Dining", "Nightlife", "Other"],
     color: [false, false, false, false, false, false],
@@ -145,6 +164,11 @@ Page({
     this.setData({array: ["Arts", "Community", "Sports", "Dining", "Nightlife", "Other"],
     color: [false, false, false, false, false, false]})
     this.setData({counter: 0, z: false})
+  },
+  bindDateChange: function(e) {
+    this.setData({
+      todayDate: e.detail.value
+    })
   }
 })
 
