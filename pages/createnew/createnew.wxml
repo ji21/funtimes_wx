@@ -14,7 +14,7 @@
         <view id="white-space"></view>
         <view class="picker-div">
           <view>Create itinerary for:</view>
-          <picker mode="date" value="{{todayDate}}" name="date" start="{{todayDate}}" end="3000-01-01" bindchange="bindDateChange">{{todayDate}}</picker>
+          <picker mode="date" value="{{todayDate}}" name="date" start="{{d}}" end="3000-01-01" bindchange="bindDateChange">{{todayDate}}</picker>
         </view>
         <button form-type="submit" class="create">Create</button>
     </form>

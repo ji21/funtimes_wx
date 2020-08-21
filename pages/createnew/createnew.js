@@ -24,6 +24,7 @@ Page({
     * Page initial data
     */
    data: {
+      d: today,
       hide: false,
       todayDate: today,
       wishlist: globalWishlist,
@@ -252,9 +253,8 @@ Page({
      const page = this
      console.log(this.data.input)
      let query1 = this.data.todayDate
-     if (a===false) query1 = ""
      const query2 = this.data.input 
-     const q = {query: query2, date: this.data.todayDate}
+     const q = {query: query2, date: "this.data.todayDate"}
      console.log("q->", q)
      wx.request({
        url: host + 'evints',

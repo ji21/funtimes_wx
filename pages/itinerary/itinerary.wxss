@@ -113,7 +113,7 @@ margin-right: 20rpx;
    background-color: white;
    display: flex;
    text-shadow: 0rpx 1rpx 1rpx;
-
+   text-transform: capitalize;
 }
 
 .share-button {

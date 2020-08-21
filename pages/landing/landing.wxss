@@ -92,6 +92,7 @@ flex-direction: row;
    height: 75%;
    width: 10%;
    padding-left: 24rpx;
+   opacity: 0.5;
  }
  
  #space {

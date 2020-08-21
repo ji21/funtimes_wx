@@ -69,6 +69,7 @@ form {
   height: 75%;
   width: 10%;
   padding-left: 24rpx;
+  opacity: 0.5;
 }
 
 #space {
@@ -84,7 +85,7 @@ picker {
   box-sizing: border-box;
   padding-left: 80rpx;
   padding-top: 36rpx;
-  padding-right: 124rpx;
+  padding-right: 58rpx;
   color: rgb(148, 145, 145);
 }
 
