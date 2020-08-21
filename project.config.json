@@ -33,7 +33,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.12.1",
 	"appid": "wx663c20c15523e939",
-	"projectname": "FunTimes2.0",
+	"projectname": "funtimes_wx",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
@@ -98,6 +98,12 @@
 					"name": "pages/landing/landing",
 					"pathName": "pages/landing/landing",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/itinerary/itinerary",
+					"pathName": "pages/itinerary/itinerary",
 					"scene": null
 				}
 			]

@@ -107,11 +107,13 @@ margin-right: 20rpx;
 }
 
 #urgent {
-   height: 29rpx;
+   height: 40rpx;
    padding-top: 18rpx;
    padding-left: 28rpx;
    background-color: white;
    display: flex;
+   text-shadow: 0rpx 1rpx 1rpx;
+
 }
 
 .share-button {

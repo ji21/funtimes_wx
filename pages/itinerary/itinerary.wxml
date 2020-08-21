@@ -2,7 +2,7 @@
 <view class = "container">
    <view class="map radius20">
       <map longitude="{{lg}}" latitude="{{lt}}" scale="{{sc}}" style="width: 100%; height: 44vh;" markers="{{mk}}"></map>
-      <view id="urgent" stlye="font-size: 40rpx">{{name}}</view>
+      <view id="urgent" class = "f36 justify-center" style="font-size: 40rpx bold"> {{name}}</view>
    </view>
    <view style="height: 700rpx"></view>
       <view class="wrapper" wx:for="{{evints}}" wx:for-item="event" data-id="{{event.activity_id}}" bindtap="outOfIdeas">

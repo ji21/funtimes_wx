@@ -18,7 +18,7 @@
       </view>
     </form>
     <view class="picker-div">
-      <view id="the-one">Create Itinerary for:</view>
+      <view id="the-one">Create itinerary for:</view>
       <picker class="iam" mode="date" value="{{todayDate}}" name="date" start="{{todayDate}}" end="3000-01-01" bindchange="bindDateChange">{{todayDate}}</picker>
     </view>
     <view id="alert" class="{{z?'':'hide'}}">Max. 3 categories can be selected.</view>
@@ -30,7 +30,7 @@
 <view class="container">
   <button bindtap="goToCreateNew"> 
     <image src="../../images/create/strategic-plan.png" mode="aspectFit"/>
-    <view class="text">Plan and Share an Itinerary</view>
+    <view class="text">Plan and Share an itinerary</view>
   </button>
 
   <button bindtap="show"> 

@@ -48,14 +48,16 @@ form {
 }
 
 .search-bar {
-  width: 98%;
+  width: 95%;
   height: 83rpx;
   display: flex;
   background-color: white;
   align-items: center;
   margin-top: 10rpx;
   box-shadow: 1rpx 1rpx 4rpx rgb(226, 226, 226);
-  border-radius: 100rpx;
+  border-radius: 10rpx;
+  margin-right: 60rpx;
+  margin-left: 60rpx;
 }
 
 .search-text {
@@ -77,7 +79,7 @@ form {
 picker {
   background-color: white;
   height: 100%;
-  width: 393rpx;
+  width: 352rpx;
   border-radius: 4rpx;
   box-sizing: border-box;
   padding-left: 80rpx;
