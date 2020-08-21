@@ -120,6 +120,12 @@ Page({
     * Called when user click on the top right corner to share
     */
    onShareAppMessage: function () {
+      console.log(this.options.id)
+      return {
+         title: `Come join me on ${this.data.date}!`,
+         imageUrl: this.data.evints[0].image,
+         path: `/pages/itinerary/itinerary?id=${this.options.id}`
+      }
    }, 
 
    test: function() {
