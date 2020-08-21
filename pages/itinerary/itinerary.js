@@ -115,7 +115,6 @@ Page({
     */
    onReachBottom: function () {
    },
-
    /**
     * Called when user click on the top right corner to share
     */
@@ -127,19 +126,10 @@ Page({
          path: `/pages/itinerary/itinerary?id=${this.options.id}`
       }
    }, 
-
    test: function() {
       console.log(6)
       const page = this
       console.log(page)
       console.log("this is the data", app)
    }
-
-
-
-
-
-
-
-
 })

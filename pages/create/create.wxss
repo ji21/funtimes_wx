@@ -162,7 +162,6 @@ image {
   color: red;
   width: 90%;
   margin: 0 auto;
-  margin-top: 25rpx;
   text-align: center;  
 }
 
@@ -170,7 +169,6 @@ image {
   color: red;
   width: 90%;
   margin: 0 auto;
-  margin-top: 25rpx;
   text-align: center;  
 }
 

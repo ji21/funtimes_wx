@@ -142,6 +142,7 @@ Page({
         arr.push(this.data.array[i])
       }
     }
+    const page = this
     console.log(arr)
     let s =  ``
     for (let i = 0; i<arr.length; i++) {
@@ -150,7 +151,8 @@ Page({
     s = s.slice(0, s.length-1)
     console.log(s)
     wx.request({
-      url: `https://funtimes.wogengapp.cn/api/v1/randomizer?${s}`,
+      url: host + `randomizer?${s}`,
+      data: {date: page.data.todayDate},
       success: (res) => {
         console.log(res.data)
         app.globalData.randomArr = res.data.evints

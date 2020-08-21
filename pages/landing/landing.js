@@ -101,9 +101,22 @@ Page({
     console.log(e)
     // console.log(e.detail.value);
     this.setData({hide: false, input: e.detail.value})
-    if (e.detail.value == "") {
-      this.setData({hide: true})
-      this.search()
-    }
+    // if (e.detail.value == "") {
+    //   this.setData({hide: true})
+    //   this.search()
+    // }
+    console.log(this.data.input)
+    const query2 = this.data.input 
+    const q = {query: query2}
+    console.log("q->", q)
+    wx.request({
+      url: host + 'evints',
+      method: "GET",
+     data: q,
+      success: (res) => {
+       console.log(res.data);
+       this.setData({events: res.data})
+      }
+    })
   }
 })

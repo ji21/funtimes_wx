@@ -5,7 +5,7 @@
    <input type="text" name="search" placeholder="Search for new exciting events in Shanghai" class="search-text" bindinput="hideForm"></input>
 </view>
 
-<button bindtap="search" id="search" class="{{hide? 'hide': ''}}">Search</button>
+<!-- <button bindtap="search" id="search" class="{{hide? 'hide': ''}}">Search</button> -->
 
 <view class="row-between w100 wrap px box-b">
       <view class="photo-box w50 noshrink pa box-b " wx:for="{{events}}" wx:for-item="event">
