@@ -22,7 +22,7 @@
 
     "permission": {
       "scope.userLocation": {
-        "desc": "Please provide your location so we can map out your journey"
+        "desc": "Please authorize your location"
       }
     },
 
