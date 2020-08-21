@@ -144,6 +144,7 @@ Page({
     })
     this.setData({array: ["Arts", "Community", "Sports", "Dining", "Nightlife", "Other"],
     color: [false, false, false, false, false, false]})
+    this.setData({counter: 0, z: false})
   }
 })
 

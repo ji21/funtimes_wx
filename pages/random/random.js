@@ -115,5 +115,12 @@ Page({
      this.setData({render: true})
      console.log(this.data.render)
    }
+ },
+ deleteIt: function (e) {
+   console.log(e.currentTarget.dataset.id)
+   const i = e.currentTarget.dataset.id
+   let arr = this.data.events.filter(a=>a.id!==i)
+    console.log(arr)
+    this.setData({events: arr})
  }
 })

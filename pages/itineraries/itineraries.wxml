@@ -19,7 +19,6 @@
             </view>
             <view class="abcde">
               <button class="btn2" bindtap="deleteIt" data-id="{{it.id}}">Remove</button>
-
             </view>
           </view>
       </view>

@@ -102,3 +102,31 @@
 .hide {
   display: none;
 }
+
+
+.btn2 {
+  text-align: center;
+  height: 39rpx;
+  width: 46%!important;
+  color: white;
+  font-weight: 500;
+  margin-left: 0rpx!important;
+  margin-right: 15rpx!important;
+  padding-bottom: 46rpx!important;
+  padding-right: 13rpx!important;
+  background-color: #f5584d;
+  padding-left: 14rpx!important;
+  padding-top: 7rpx;
+  border-radius: 20rpx;
+  font-size: 26rpx;
+}
+
+.abcde {
+  width: 47%;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 0rpx;
+  bottom: 13rpx;  
+}
+

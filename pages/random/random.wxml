@@ -24,6 +24,9 @@
             <view class="address">...at {{event.venue}}</view>
           </view>
         </view>
+        <view class="abcde">
+          <button class="btn2" catchtap="deleteIt" data-id="{{event.id}}">Remove</button>
+        </view>
       </view>
     </view>
     <button class="create" bindtap="create">Create Itinerary</button>

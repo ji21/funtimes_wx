@@ -34,8 +34,8 @@ form {
 
 .title > input {
   width: 95%;
-  border-top-right-radius: 14rpx;
-  border-bottom-right-radius: 14rpx;
+  border-top-right-radius: 4rpx;
+  border-bottom-right-radius: 4rpx;
   height: 100%;
   padding-left: 28rpx;
 }
@@ -43,8 +43,8 @@ form {
 #white-space {
   width: 5%;
   background-color: white;
-  border-top-left-radius: 14rpx;
-  border-bottom-left-radius: 14rpx;
+  border-top-left-radius: 4rpx;
+  border-bottom-left-radius: 4rpx;
 }
 
 .search-bar {
@@ -147,15 +147,16 @@ picker {
 }
 
 #add-show > button {
-  color:black!important;
   font-weight: 400;
 }
 
 .red {
+  color: white!important;
   background-color: #f5584d!important;
 }
 
 .green {
+  color:black!important;
   background-color: #3BE2AB!important;
 }
 
