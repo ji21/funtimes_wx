@@ -24,7 +24,7 @@
 
  #itinerary-name {
    width: 100%;
-   font-size: 30rpx;
+   font-size: 34rpx;
    height: 50rpx;
    overflow: hidden;
    white-space: nowrap;
@@ -71,8 +71,8 @@
    white-space: nowrap;
    text-overflow: ellipsis;
    color: black;
-   margin-top: -4rpx;
-   font-size: 20rpx;
+   margin-top: 3rpx;
+   font-size: 26rpx;   
  }
 
 
@@ -87,6 +87,7 @@
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    right: 15rpx;
  }
 
  .xyz {
